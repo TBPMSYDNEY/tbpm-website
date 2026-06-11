@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { services, whyChoose, testimonial, site } from "@/data/site";
 import Cta from "@/components/Cta";
+import HomePopup from "@/components/HomePopup";
 
 export const metadata: Metadata = {
   title: "Building Management Sydney | TBPM — Total Building & Property Management",
@@ -55,6 +56,7 @@ const valueProps = [
 export default function HomePage() {
   return (
     <>
+      <HomePopup />
       {/* Hero */}
       <section className="relative overflow-hidden bg-ink">
         <Image
