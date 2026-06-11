@@ -46,6 +46,7 @@ export type ServicePage = {
   metaDescription: string;
   heroImage: string;
   cardImage: string;
+  gallery?: string[];
   icon: string;
   title: string;
   intro: string[];
@@ -63,8 +64,9 @@ export const services: ServicePage[] = [
     metaTitle: "On-Site Building Management Sydney | TBPM",
     metaDescription:
       "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with 24/7 emergency support, contractor coordination and compliance reporting.",
-    heroImage: "/images/office-building.jpg",
-    cardImage: "/images/office-building.jpg",
+    heroImage: "/images/construction-workers.jpg",
+    cardImage: "/images/9d5725a8eb6e84ecabf7710a18b30484.jpg",
+    gallery: ["/images/7.png", "/images/8.png", "/images/9.png"],
     icon: "/images/tbpm-icon-full-time-on-site-white-2.png",
     title: "Full-Time On-Site Building Management",
     intro: [
@@ -149,8 +151,9 @@ export const services: ServicePage[] = [
     metaTitle: "Part-Time & Hybrid Building Management Sydney | TBPM",
     metaDescription:
       "Structured part-time and hybrid building management for 30–100 lot Sydney strata schemes — weekly rosters of 8–20 hours backed by remote office support.",
-    heroImage: "/images/shutterstock_2453839265-1.jpg",
-    cardImage: "/images/shutterstock_2453839265-1.jpg",
+    heroImage: "/images/46993211_l-1-scaled-1.jpg",
+    cardImage: "/images/9d5725a8eb6e84ecabf7710a18b30484.jpg",
+    gallery: ["/images/10.png", "/images/11.png", "/images/Untitled-design-6.png"],
     icon: "/images/tbpm-icon-part-time-hybrid-white-2.png",
     title: "Part-Time & Hybrid Building Management",
     intro: [
@@ -229,8 +232,9 @@ export const services: ServicePage[] = [
     metaTitle: "Strata Cleaning Services Sydney | TBPM",
     metaDescription:
       "Structured strata cleaning programs for Sydney buildings — common areas, waste rooms, fire stairs and car parks, up to 7 days per week with vetted staff.",
-    heroImage: "/images/46993211_l-1-scaled-1.jpg",
-    cardImage: "/images/46993211_l-1-scaled-1.jpg",
+    heroImage: "/images/shutterstock_2453839265-1.jpg",
+    cardImage: "/images/18.png",
+    gallery: ["/images/19.png", "/images/20.png"],
     icon: "/images/tbpm-line-cleaning-2.png",
     title: "Strata Cleaning Services for Sydney Buildings",
     intro: [
@@ -293,7 +297,8 @@ export const services: ServicePage[] = [
     metaDescription:
       "Professional garden and landscape maintenance for Sydney strata buildings — lawns, hedging, irrigation, pest control and horticultural advice.",
     heroImage: "/images/unnamed.jpg",
-    cardImage: "/images/unnamed.jpg",
+    cardImage: "/images/b7562ff73a2ca012e52017ff46a25434.avif",
+    gallery: ["/images/Untitled-300-x-250-px-1.png", "/images/e572530a490e0d8a67ffe165459ef00d.jpg"],
     icon: "/images/tbpm-line-gardening-2.png",
     title: "Strata Gardening & Landscape Maintenance in Sydney",
     intro: [
@@ -356,7 +361,8 @@ export const services: ServicePage[] = [
     metaDescription:
       "Professional concierge services for Sydney residential and mixed-use buildings — front-of-house presence, parcel management, visitor coordination and amenity bookings.",
     heroImage: "/images/hotel-concierge.jpg",
-    cardImage: "/images/hotel-concierge.jpg",
+    cardImage: "/images/Untitled-300-x-250-px-2.png",
+    gallery: ["/images/Untitled-300-x-250-px-3.png", "/images/7.png", "/images/9.png"],
     icon: "/images/tbpm-icon-concierge-white-2.png",
     title: "Concierge Services for Sydney Residential & Mixed-Use Buildings",
     intro: [
@@ -432,8 +438,9 @@ export const services: ServicePage[] = [
     metaTitle: "Strata Project Management & Defect Works Sydney | TBPM",
     metaDescription:
       "Strata project management for Sydney buildings — defect rectification, capital works and common-area upgrades managed by construction-experienced teams.",
-    heroImage: "/images/construction-workers.jpg",
-    cardImage: "/images/construction-project-management-guide-768x432-1.jpg",
+    heroImage: "/images/construction-project-management-guide-768x432-1.jpg",
+    cardImage: "/images/13.png",
+    gallery: ["/images/14.png", "/images/15.png"],
     icon: "/images/tbpm-line-project-management-2.png",
     title: "Strata Project Management & Defect Works in Sydney",
     intro: [

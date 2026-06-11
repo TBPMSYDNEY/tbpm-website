@@ -74,6 +74,30 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
         </section>
       )}
 
+      {/* Gallery */}
+      {service.gallery && service.gallery.length > 0 && (
+        <section className="pb-4">
+          <div className="container-site grid grid-cols-2 gap-4 md:grid-cols-3">
+            {service.gallery.map((img, i) => (
+              <div
+                key={img}
+                className={`relative aspect-[3/2] overflow-hidden rounded-2xl ${
+                  i === 0 && service.gallery!.length === 2 ? "md:col-span-2" : ""
+                }`}
+              >
+                <Image
+                  src={img}
+                  alt={`${service.title} — TBPM`}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 24rem, 50vw"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* What's included */}
       <section className="py-16 sm:py-20">
         <div className="container-site">
