@@ -27,7 +27,7 @@ export default function Hero3D() {
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const INK = new THREE.Color("#0f172a");
+    const INK = new THREE.Color("#2a271f");
     const BRAND = new THREE.Color("#00bf63");
     const EMERALD = new THREE.Color("#34d399");
 
@@ -54,7 +54,7 @@ export default function Hero3D() {
     renderer.domElement.style.display = "block";
 
     // ---- Lighting -------------------------------------------------------
-    scene.add(new THREE.AmbientLight(0x223044, 0.9));
+    scene.add(new THREE.AmbientLight(0x332e22, 0.9));
 
     const key = new THREE.DirectionalLight(0xffffff, 1.1);
     key.position.set(8, 18, 10);
@@ -80,7 +80,7 @@ export default function Hero3D() {
     geometry.translate(0, 0.5, 0); // grow upward from the floor
 
     const material = new THREE.MeshStandardMaterial({
-      color: new THREE.Color("#1b2740"),
+      color: new THREE.Color("#3a352b"),
       metalness: 0.55,
       roughness: 0.35,
     });
@@ -106,7 +106,7 @@ export default function Hero3D() {
 
         // colour: mostly cool slate, a scatter of brand-green "lit windows"
         const lit = Math.random() > 0.82;
-        color.copy(lit ? BRAND : INK).lerp(new THREE.Color("#243150"), lit ? 0.15 : 0.55);
+        color.copy(lit ? BRAND : INK).lerp(new THREE.Color("#423c30"), lit ? 0.15 : 0.55);
         mesh.setColorAt(i, color);
         i++;
       }
@@ -118,7 +118,7 @@ export default function Hero3D() {
     const floor = new THREE.Mesh(
       new THREE.PlaneGeometry(80, 80),
       new THREE.MeshStandardMaterial({
-        color: new THREE.Color("#0b1220"),
+        color: new THREE.Color("#1d1b15"),
         metalness: 0.7,
         roughness: 0.5,
       })

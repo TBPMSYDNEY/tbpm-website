@@ -7,7 +7,18 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-ink antialiased;
+    @apply text-ink antialiased;
+    /* Subtle top-to-bottom warm gradient: cooler warm-white -> warm sand,
+       mirroring the 2026 Capability Statement page wash. Fixed so it spans
+       the full page rather than tiling per-section. */
+    background-color: theme("colors.surface.base");
+    background-image: linear-gradient(
+      180deg,
+      theme("colors.surface.base") 0%,
+      theme("colors.surface.mid") 55%,
+      theme("colors.surface.sand") 100%
+    );
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -22,7 +33,7 @@
   }
   ::selection {
     background-color: rgba(0, 191, 99, 0.22);
-    color: #0f172a;
+    color: #2a271f;
   }
   :focus-visible {
     outline: 2px solid #00bf63;
@@ -78,7 +89,7 @@
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/10;
   }
   .section-label {
-    @apply mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-brand;
+    @apply mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-brand-text;
   }
   .section-label::before {
     content: "";

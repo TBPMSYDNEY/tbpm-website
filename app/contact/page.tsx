@@ -32,18 +32,18 @@ export default function ContactPage() {
           </div>
 
           <aside className="space-y-6">
-            <div className="rounded-3xl border border-ink/5 bg-slate-50 p-8">
+            <div className="rounded-3xl border border-ink/5 bg-surface-sand p-8">
               <h3 className="text-lg font-extrabold">Contact Details</h3>
               <ul className="mt-5 space-y-4 text-sm text-ink-soft">
                 <li>
                   <p className="font-semibold text-ink-mute">Email</p>
-                  <a href={`mailto:${site.email}`} className="font-bold text-brand">
+                  <a href={`mailto:${site.email}`} className="font-bold text-brand-text">
                     {site.email}
                   </a>
                 </li>
                 <li>
                   <p className="font-semibold text-ink-mute">Phone</p>
-                  <a href={site.phoneHref} className="font-bold text-brand">
+                  <a href={site.phoneHref} className="font-bold text-brand-text">
                     {site.phone}
                   </a>
                 </li>

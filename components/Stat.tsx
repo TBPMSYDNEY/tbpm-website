@@ -62,10 +62,10 @@ export default function Stat({
 
   return (
     <div ref={ref}>
-      <div className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+      <div className="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
         {staticValue ?? `${prefix}${display.toLocaleString()}${suffix}`}
       </div>
-      <div className="mt-2 text-sm font-medium text-white/60">{label}</div>
+      <div className="mt-2 text-sm font-medium text-ink-mute">{label}</div>
     </div>
   );
 }

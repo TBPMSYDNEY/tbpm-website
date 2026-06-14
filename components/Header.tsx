@@ -61,7 +61,7 @@ export default function Header() {
                   className={`flex items-center gap-1 text-sm font-semibold transition hover:text-brand ${
                     pathname.startsWith("/services") ||
                     item.children.some((c) => pathname === c.href)
-                      ? "text-brand"
+                      ? "text-brand-text"
                       : "text-ink"
                   }`}
                 >
@@ -81,7 +81,7 @@ export default function Header() {
                         key={child.href}
                         href={child.href}
                         className={`block rounded-xl px-4 py-2.5 text-sm font-medium transition hover:bg-brand-light hover:text-brand ${
-                          pathname === child.href ? "text-brand" : "text-ink-soft"
+                          pathname === child.href ? "text-brand-text" : "text-ink-soft"
                         }`}
                       >
                         {child.label}
@@ -95,7 +95,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 className={`text-sm font-semibold transition hover:text-brand ${
-                  pathname === item.href ? "text-brand" : "text-ink"
+                  pathname === item.href ? "text-brand-text" : "text-ink"
                 }`}
               >
                 {item.label}

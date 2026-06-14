@@ -54,7 +54,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founders */}
-      <section className="bg-slate-50 py-16 sm:py-24">
+      <section className="bg-surface-mid py-16 sm:py-24">
         <div className="container-site">
           <span className="section-label">Leadership</span>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Founders</h2>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 </div>
                 <div className="p-8">
                   <h3 className="text-xl font-extrabold">Ajit Shrestha</h3>
-                  <p className="mt-1 text-sm font-bold uppercase tracking-wider text-brand">
+                  <p className="mt-1 text-sm font-bold uppercase tracking-wider text-brand-text">
                     Director, Building Operations
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-ink-mute">
@@ -104,7 +104,7 @@ export default function AboutPage() {
                 </div>
                 <div className="p-8">
                   <h3 className="text-xl font-extrabold">Steven</h3>
-                  <p className="mt-1 text-sm font-bold uppercase tracking-wider text-brand">
+                  <p className="mt-1 text-sm font-bold uppercase tracking-wider text-brand-text">
                     Director, Construction &amp; Project Management
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-ink-mute">

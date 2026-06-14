@@ -11,8 +11,8 @@ export const site = {
     "Sydney's trusted partner for building management, cleaning, gardening, concierge services, and project management. We protect property assets and enhance resident satisfaction.",
   social: {
     facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/",
-    linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/tbpm_sydney",
+    linkedin: "https://www.linkedin.com/company/tbpm/",
   },
   external: {
     mybos: "https://app.mybos.com/",

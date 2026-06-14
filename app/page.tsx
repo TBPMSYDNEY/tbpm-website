@@ -146,9 +146,8 @@ export default function HomePage() {
       </section>
 
       {/* Stats strip */}
-      <section className="relative overflow-hidden bg-ink-soft">
+      <section className="relative overflow-hidden bg-surface-sand">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
-        <div className="aurora pointer-events-none absolute inset-0 opacity-70" />
         <div className="container-site relative grid grid-cols-2 gap-8 py-14 lg:grid-cols-4">
           <Stat value={30} suffix="+" label="Years combined experience" />
           <Stat staticValue="24/7" label="Emergency response" />
@@ -192,7 +191,7 @@ export default function HomePage() {
       </section>
 
       {/* Services */}
-      <section className="bg-slate-50 py-16 sm:py-24">
+      <section className="bg-surface-mid py-16 sm:py-24">
         <div className="container-site">
           <Reveal className="max-w-2xl">
             <span className="section-label">Our Services</span>
@@ -231,7 +230,7 @@ export default function HomePage() {
                           {teaser.fit}
                         </p>
                       )}
-                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
+                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-text">
                         Learn more
                         <span className="transition-transform duration-300 group-hover:translate-x-1">
                           →
@@ -258,7 +257,7 @@ export default function HomePage() {
           <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {whyChoose.map((w, i) => (
               <Reveal key={w.title} className="flex gap-5" delay={(i % 3) * 80}>
-                <span className="flex h-11 w-11 flex-none items-center justify-center rounded-2xl bg-brand-light text-sm font-extrabold text-brand">
+                <span className="flex h-11 w-11 flex-none items-center justify-center rounded-2xl bg-brand-light text-sm font-extrabold text-brand-text">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -272,7 +271,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonial */}
-      <section className="bg-brand-light py-16 sm:py-20">
+      <section className="bg-surface-sage py-16 sm:py-20">
         <Reveal className="container-site max-w-3xl text-center">
           <span className="section-label justify-center">What Our Clients Say</span>
           <blockquote className="text-2xl font-semibold leading-snug tracking-tight text-ink">

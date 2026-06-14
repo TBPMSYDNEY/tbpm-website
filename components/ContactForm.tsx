@@ -56,7 +56,7 @@ export default function ContactForm() {
         <h3 className="text-xl font-extrabold">Thanks — your email client should now be open.</h3>
         <p className="mt-3 text-sm leading-relaxed text-ink-mute">
           If it didn&rsquo;t open, email us directly at{" "}
-          <a href={`mailto:${site.email}`} className="font-semibold text-brand">
+          <a href={`mailto:${site.email}`} className="font-semibold text-brand-text">
             {site.email}
           </a>{" "}
           or call {site.phone}. We&rsquo;ll respond within one business day.

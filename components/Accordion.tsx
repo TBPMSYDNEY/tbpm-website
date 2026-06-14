@@ -53,7 +53,7 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
                           href={l.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-brand hover:underline"
+                          className="text-sm font-semibold text-brand-text hover:underline"
                         >
                           {l.label} ↗
                         </a>

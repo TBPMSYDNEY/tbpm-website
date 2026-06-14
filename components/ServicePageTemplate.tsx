@@ -60,7 +60,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
 
       {/* Onboarding package */}
       {service.onboarding && (
-        <section className="bg-brand-light py-16 sm:py-20">
+        <section className="bg-surface-sage py-16 sm:py-20">
           <div className="container-site">
             <span className="section-label">Included at no cost</span>
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -121,7 +121,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
       </section>
 
       {/* How it works */}
-      <section className="bg-slate-50 py-16 sm:py-20">
+      <section className="bg-surface-mid py-16 sm:py-20">
         <div className="container-site">
           <span className="section-label">Getting started</span>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">How It Works</h2>
@@ -170,7 +170,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
       </section>
 
       {/* Related services */}
-      <section className="bg-slate-50 py-16 sm:py-20">
+      <section className="bg-surface-sand py-16 sm:py-20">
         <div className="container-site">
           <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
             Other TBPM Services
@@ -193,7 +193,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
                   </div>
                   <div className="p-6">
                     <h3 className="font-bold transition group-hover:text-brand">{s.navLabel}</h3>
-                    <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand">
+                    <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand-text">
                       Learn more
                       <span className="transition-transform duration-300 group-hover:translate-x-1">
                         →
