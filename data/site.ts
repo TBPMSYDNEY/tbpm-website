@@ -10,7 +10,7 @@ export const site = {
   tagline:
     "Sydney's trusted partner for building management, cleaning, gardening, concierge services, and project management. We protect property assets and enhance resident satisfaction.",
   social: {
-    facebook: "https://www.facebook.com/",
+    facebook: "https://www.facebook.com/people/Total-Building-Property-Management/61560972854208/",
     instagram: "https://www.instagram.com/tbpm_sydney",
     linkedin: "https://www.linkedin.com/company/tbpm/",
   },
@@ -534,55 +534,79 @@ export const whyChoose = [
 export const knowledgeItems = [
   {
     title: "How Strata Works in NSW",
-    body: "When you buy into a strata scheme, you own your lot and share ownership of common property with every other owner through the Owners Corporation. The Owners Corporation is responsible for managing the scheme — finances, insurance, maintenance and by-laws. Recent NSW reforms effective 1 April 2026 strengthen repair obligations and developer accountability for new buildings.",
+    body: "Strata buildings are managed by the Owners Corporation — every lot owner collectively, usually acting through an elected Strata Committee. The Owners Corporation is responsible for maintaining common property, managing the scheme's finances, holding the required insurances and complying with the Strata Schemes Management Act 2015. Reforms taking effect on 1 April 2026 strengthen obligations around repairs and long-term maintenance planning.",
     links: [
       { label: "NSW Government — Strata overview", href: "https://www.nsw.gov.au/housing-and-construction/strata" },
+      { label: "Strata living guide", href: "https://www.nsw.gov.au/housing-and-construction/strata/strata-living-guide" },
+      { label: "Guide to recent strata law changes", href: "https://www.nsw.gov.au/housing-and-construction/strata/guide-to-strata-law-changes-for-strata-committees-and-owners" },
       { label: "Strata Schemes Management Act 2015", href: "https://legislation.nsw.gov.au/view/html/inforce/current/act-2015-050" },
     ],
   },
   {
-    title: "Owners Corporation vs Lot Owners — Who Fixes What?",
-    body: "The Owners Corporation is responsible for maintaining and repairing common property, while each lot owner is responsible for everything inside their own lot. Common property generally includes the building structure, roof, pipes and balconies; lot owners cover internal finishes and their own installations. Boundary disputes are common — when in doubt, check the strata plan.",
-    links: [],
-  },
-  {
-    title: "The Strata Hub & Annual Reporting",
-    body: "NSW strata schemes must submit an annual report to the Strata Hub within three months of each AGM, covering contact details, insurance and key building information. Penalties apply for non-compliance.",
+    title: "Who Is Responsible for What — Owners Corporation vs Lot Owners",
+    body: "The Owners Corporation maintains common property — the building structure, roof, foundations, external walls, common pipes, balcony slabs, waterproofing, lobbies, lifts, stairwells, driveways and gardens. Individual lot owners look after their interiors — floor finishes, internal walls, fixtures, fittings and anything they have installed themselves. The exact boundary depends on your registered strata plan, and grey areas such as original windows, balcony tiling and waterproofing are a common source of disputes. Clear maintenance planning and an up-to-date asset register help resolve these before they escalate.",
     links: [
-      { label: "NSW Strata Hub", href: "https://www.nsw.gov.au/housing-and-construction/strata/serviceshub" },
+      { label: "Strata living guide", href: "https://www.nsw.gov.au/housing-and-construction/strata/strata-living-guide" },
+      { label: "Living in strata (rights and obligations)", href: "https://www.nsw.gov.au/housing-and-construction/strata/living" },
+      { label: "Strata Schemes Management Act 2015", href: "https://legislation.nsw.gov.au/view/html/inforce/current/act-2015-050" },
     ],
   },
   {
-    title: "Levies, Capital Works Fund & Budgeting",
-    body: "Schemes are funded through quarterly levies split between the administrative fund (day-to-day expenses) and the capital works fund (major repairs and replacements). A realistic 10-year capital works plan is the difference between planned upgrades and painful special levies.",
-    links: [],
+    title: "The Strata Hub & Annual Reporting",
+    body: "All NSW strata schemes — including two-lot duplexes — must report annually to the NSW Strata Hub within three months of their Annual General Meeting. Reports cover contact details, insurance and key building information, and late or missed reporting attracts penalties. Keeping accurate, current records is a hallmark of good building management.",
+    links: [
+      { label: "NSW Strata Hub", href: "https://www.nsw.gov.au/housing-and-construction/strata/strata-hub" },
+      { label: "Strata annual reporting", href: "https://www.nsw.gov.au/housing-and-construction/strata/annual-reporting" },
+      { label: "Submit strata annual report", href: "https://www.service.nsw.gov.au/transaction/submit-strata-scheme-annual-report" },
+    ],
+  },
+  {
+    title: "Levies, the Capital Works Fund & Budgeting",
+    body: "Buildings are funded through quarterly levies, split between the administrative fund (day-to-day running costs) and the capital works fund (major repairs and replacements such as roofs, lifts, painting and waterproofing). Sound capital works planning — guided by a maintenance strategy and accurate asset records — is what prevents nasty surprises in the form of special levies.",
+    links: [
+      { label: "Strata levies, finances and insurance", href: "https://www.nsw.gov.au/housing-and-construction/strata/living/levies-finances-insurance" },
+      { label: "Strata Schemes Management Act 2015", href: "https://legislation.nsw.gov.au/view/html/inforce/current/act-2015-050" },
+    ],
   },
   {
     title: "Fire Safety & the Annual Fire Safety Statement (AFSS)",
-    body: "Most residential buildings require annual inspection of fire safety measures by an accredited practitioner, with the AFSS lodged with council and Fire and Rescue NSW. It is one of the most commonly missed compliance requirements in self-managed buildings — and the penalties escalate quickly.",
-    links: [],
+    body: "Most strata buildings must have their essential fire safety measures inspected each year by an accredited practitioner, who issues an Annual Fire Safety Statement (AFSS) that is lodged with the local council and Fire and Rescue NSW. The current fire safety schedule and statement must be displayed prominently in the building. Missing or late statements are one of the most common compliance failures in self-managed buildings.",
+    links: [
+      { label: "Fire safety certification (NSW Planning Portal)", href: "https://www.planning.nsw.gov.au/policy-and-legislation/buildings/fire-safety-in-buildings/fire-safety-certification" },
+      { label: "Lodge a fire safety statement (Fire and Rescue NSW)", href: "https://www.fire.nsw.gov.au/fire-safety/building-fire-safety/service-type-tool/lodge-a-fire-safety-statement" },
+      { label: "Fire and Rescue NSW", href: "https://www.fire.nsw.gov.au/" },
+    ],
   },
   {
     title: "Building Defects & the Strata Building Bond",
-    body: "The Strata Building Bond and Inspections Scheme applies to newer Class 2 apartment buildings, requiring developers to lodge a bond and follow a structured inspection and rectification process. Acting within the statutory windows is critical — missed deadlines mean lost rights.",
-    links: [],
+    body: "For newer Class 2 apartment buildings, the Strata Building Bond and Inspections Scheme requires developers to lodge a bond that funds defect rectification through independent inspections. Older buildings deal with defects — concrete spalling, waterproofing failure, render cracking and balcony issues — through remedial projects. Careful scope definition and contractor accountability protect the Owners Corporation throughout.",
+    links: [
+      { label: "Strata Building Bond and Inspections Scheme", href: "https://www.nsw.gov.au/housing-and-construction/building/strata-building-bond-and-inspections-scheme" },
+      { label: "Building Commission NSW", href: "https://www.nsw.gov.au/departments-and-agencies/building-commission" },
+    ],
   },
   {
     title: "Work Health & Safety on Common Property",
-    body: "An Owners Corporation is a PCBU under NSW work health and safety law when it engages workers. That means verifying contractor licences and insurance, and obtaining Safe Work Method Statements for high-risk work on common property.",
-    links: [],
+    body: "Under NSW work health and safety law, an Owners Corporation is a person conducting a business or undertaking (PCBU) and has legal duties to keep common property safe for residents, visitors and contractors. In practice that means verifying contractor licences and insurances and obtaining Safe Work Method Statements (SWMS) before any work begins on site.",
+    links: [
+      { label: "SafeWork NSW", href: "https://www.safework.nsw.gov.au/" },
+    ],
   },
   {
     title: "By-Laws & Resolving Disputes",
-    body: "By-laws govern how residents use lots and common property. Most disputes should go through internal communication first, then NSW Fair Trading mediation, before an application to NCAT.",
+    body: "By-laws govern day-to-day life in the scheme — covering pets, parking, renovations and noise — and must be registered to be enforceable. Where disputes can't be resolved internally, they go to mediation through NSW Fair Trading before any application to the NSW Civil and Administrative Tribunal (NCAT).",
     links: [
-      { label: "NSW Fair Trading — Strata disputes", href: "https://www.nsw.gov.au/housing-and-construction/strata/dealing-with-disputes" },
+      { label: "Living in strata", href: "https://www.nsw.gov.au/housing-and-construction/strata/living" },
+      { label: "NCAT — Strata schemes orders", href: "https://ncat.nsw.gov.au/case-types/housing-and-property/strata-and-community-living/strata-schemes/strata-schemes-orders.html" },
     ],
   },
   {
     title: "Building Manager vs Strata Manager — What's the Difference?",
-    body: "A strata manager looks after the administration and governance of the scheme — levies, meetings, insurance and records. A building manager looks after the physical building and its day-to-day operation — maintenance, contractors, cleaning, security and residents. Most buildings over 30 lots benefit from both, working together.",
-    links: [],
+    body: "Well-run buildings usually have both. A strata manager (licensed in NSW) handles administration and governance — issuing levies, arranging insurance, organising meetings, keeping records and ensuring compliance — typically from an office while managing multiple schemes. A building manager (caretaker / facilities manager) looks after the physical building — an on-site presence coordinating contractors, monitoring common areas, organising maintenance and dealing with residents. In short, the strata manager handles the paperwork and finances; the building manager looks after the infrastructure and the people.",
+    links: [
+      { label: "Strata in NSW — overview", href: "https://www.nsw.gov.au/housing-and-construction/strata" },
+      { label: "Strata living guide", href: "https://www.nsw.gov.au/housing-and-construction/strata/strata-living-guide" },
+    ],
   },
 ];
 

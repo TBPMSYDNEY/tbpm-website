@@ -46,11 +46,11 @@ export default function HomePopup() {
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  // Open 1.5s after load (once per session).
+  // Open 4s after load (once per session).
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (sessionStorage.getItem("tbpm-popup-seen")) return;
-    const timer = setTimeout(() => setMounted(true), 1500);
+    const timer = setTimeout(() => setMounted(true), 4000);
     return () => clearTimeout(timer);
   }, []);
 

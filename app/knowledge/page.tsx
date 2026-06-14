@@ -22,18 +22,24 @@ export default function KnowledgePage() {
 
       <section className="py-16 sm:py-24">
         <div className="container-site max-w-4xl">
+          <p className="mb-12 text-lg leading-relaxed text-ink-mute">
+            Strata living comes with a lot of obligations — and a lot of confusing terminology.
+            This Knowledge Hub brings together plain-English explanations of the topics that matter
+            most to strata committees and owners in NSW, alongside links to the official government
+            resources where you can confirm the detail.
+          </p>
           <Accordion items={knowledgeItems} />
           <p className="mt-8 text-sm leading-relaxed text-ink-mute">
-            This information is general in nature and reflects NSW strata legislation as at the
-            time of writing. It is not legal advice — for specific matters, seek advice from a
-            qualified professional or contact NSW Fair Trading.
+            This information is general in nature and is intended to help you ask better questions
+            and understand your building's responsibilities — it is not legal advice. For specific
+            matters, seek advice from a qualified professional or contact NSW Fair Trading.
           </p>
         </div>
       </section>
 
       <Cta
-        heading="Have a question about your building?"
-        text="Talk to a team that manages these issues every day. We'll give you a straight answer."
+        heading="Still Have a Question?"
+        text="If this page hasn't answered your question, the TBPM team is happy to help — whether you're a committee member weighing up your options or an owner trying to understand your building."
       />
     </>
   );
