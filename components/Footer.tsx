@@ -53,6 +53,11 @@ export default function Footer() {
               </li>
             ))}
             <li>
+              <a href="/docs/TBPM-Capability-Statement-2026.pdf" target="_blank" rel="noopener noreferrer" className="text-white/70 transition hover:text-brand">
+                Capability Statement
+              </a>
+            </li>
+            <li>
               <a href={site.external.mybos} target="_blank" rel="noopener noreferrer" className="text-white/70 transition hover:text-brand">
                 MYBOS Login
               </a>
