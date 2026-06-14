@@ -66,7 +66,7 @@ export const services: ServicePage[] = [
       "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with 24/7 emergency support, contractor coordination and compliance reporting.",
     heroImage: "/images/construction-workers.jpg",
     cardImage: "/images/9d5725a8eb6e84ecabf7710a18b30484.jpg",
-    gallery: ["/images/7.jpg", "/images/8.jpg", "/images/9.jpg"],
+    gallery: ["/images/7.png", "/images/8.png", "/images/9.png"],
     icon: "/images/tbpm-icon-full-time-on-site-white-2.png",
     title: "Full-Time On-Site Building Management",
     intro: [
@@ -153,7 +153,7 @@ export const services: ServicePage[] = [
       "Structured part-time and hybrid building management for 30–100 lot Sydney strata schemes — weekly rosters of 8–20 hours backed by remote office support.",
     heroImage: "/images/46993211_l-1-scaled-1.jpg",
     cardImage: "/images/9d5725a8eb6e84ecabf7710a18b30484.jpg",
-    gallery: ["/images/10.jpg", "/images/11.jpg", "/images/Untitled-design-6.png"],
+    gallery: ["/images/10.png", "/images/11.png", "/images/Untitled-design-6.png"],
     icon: "/images/tbpm-icon-part-time-hybrid-white-2.png",
     title: "Part-Time & Hybrid Building Management",
     intro: [
@@ -233,8 +233,8 @@ export const services: ServicePage[] = [
     metaDescription:
       "Structured strata cleaning programs for Sydney buildings — common areas, waste rooms, fire stairs and car parks, up to 7 days per week with vetted staff.",
     heroImage: "/images/shutterstock_2453839265-1.jpg",
-    cardImage: "/images/18.jpg",
-    gallery: ["/images/19.jpg", "/images/20.jpg"],
+    cardImage: "/images/18.png",
+    gallery: ["/images/19.png", "/images/20.png"],
     icon: "/images/tbpm-line-cleaning-2.png",
     title: "Strata Cleaning Services for Sydney Buildings",
     intro: [
@@ -362,7 +362,7 @@ export const services: ServicePage[] = [
       "Professional concierge services for Sydney residential and mixed-use buildings — front-of-house presence, parcel management, visitor coordination and amenity bookings.",
     heroImage: "/images/hotel-concierge.jpg",
     cardImage: "/images/Untitled-300-x-250-px-2.png",
-    gallery: ["/images/Untitled-300-x-250-px-3.png", "/images/7.jpg", "/images/9.jpg"],
+    gallery: ["/images/Untitled-300-x-250-px-3.png", "/images/7.png", "/images/9.png"],
     icon: "/images/tbpm-icon-concierge-white-2.png",
     title: "Concierge Services for Sydney Residential & Mixed-Use Buildings",
     intro: [
@@ -439,8 +439,8 @@ export const services: ServicePage[] = [
     metaDescription:
       "Strata project management for Sydney buildings — defect rectification, capital works and common-area upgrades managed by construction-experienced teams.",
     heroImage: "/images/construction-project-management-guide-768x432-1.jpg",
-    cardImage: "/images/13.jpg",
-    gallery: ["/images/14.jpg", "/images/15.jpg"],
+    cardImage: "/images/13.png",
+    gallery: ["/images/14.png", "/images/15.png"],
     icon: "/images/tbpm-line-project-management-2.png",
     title: "Strata Project Management & Defect Works in Sydney",
     intro: [
