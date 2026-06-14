@@ -13,6 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
+        eyebrow="Get In Touch"
         title="Tell us about your building."
         subtitle="We'll respond within one business day with a tailored proposal — or call the number below if it's urgent."
         image="/images/office-building.jpg"

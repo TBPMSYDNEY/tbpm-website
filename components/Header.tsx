@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,18 +9,38 @@ import { nav, site } from "@/data/site";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/5 bg-white/95 backdrop-blur">
-      <div className="container-site flex h-20 items-center justify-between gap-6">
+    <header
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ease-premium ${
+        scrolled
+          ? "border-ink/10 bg-white/90 shadow-soft backdrop-blur-xl"
+          : "border-transparent bg-white/70 backdrop-blur"
+      }`}
+    >
+      <div
+        className={`container-site flex items-center justify-between gap-6 transition-all duration-300 ease-premium ${
+          scrolled ? "h-16" : "h-20"
+        }`}
+      >
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image
             src="/images/logo.png"
             alt="TBPM — Total Building & Property Management"
             width={56}
             height={56}
-            className="h-14 w-14 object-contain"
+            className={`object-contain transition-all duration-300 ease-premium ${
+              scrolled ? "h-11 w-11" : "h-14 w-14"
+            }`}
             priority
           />
           <span className="hidden flex-col leading-tight sm:flex">
@@ -54,8 +74,8 @@ export default function Header() {
                     />
                   </svg>
                 </Link>
-                <div className="invisible absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-                  <div className="overflow-hidden rounded-2xl border border-ink/5 bg-white p-2 shadow-xl">
+                <div className="invisible absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-300 ease-premium group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="overflow-hidden rounded-2xl border border-ink/5 bg-white p-2 shadow-lift">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}

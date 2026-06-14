@@ -30,6 +30,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        eyebrow="What We Do"
         title="Our Services"
         subtitle="TBPM delivers a full suite of building management services designed to maintain, protect and enhance your property. Whether you need a full-time on-site manager, a hybrid solution, or specialised cleaning and gardening services, we tailor our approach to your building and its community."
         image="/images/9d5725a8eb6e84ecabf7710a18b30484.jpg"

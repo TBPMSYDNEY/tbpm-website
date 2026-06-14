@@ -9,8 +9,9 @@ export default function Cta({
   text?: string;
 }) {
   return (
-    <section className="bg-ink">
-      <div className="container-site flex flex-col items-center gap-8 py-20 text-center">
+    <section className="relative overflow-hidden bg-ink grain">
+      <div className="aurora pointer-events-none absolute inset-0" />
+      <div className="container-site relative flex flex-col items-center gap-8 py-24 text-center">
         <h2 className="max-w-2xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           {heading}
         </h2>

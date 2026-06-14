@@ -14,6 +14,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        eyebrow="Who We Are"
         title="About TBPM"
         subtitle="Professional building management, backed by real construction expertise."
         image="/images/construction-workers.jpg"
@@ -42,8 +43,8 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
             <Image
-              src="/images/office-building.jpg"
-              alt="Residential strata building in Sydney"
+              src="/images/sydney-skyline.png"
+              alt="Sydney city skyline"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 36rem, 100vw"

@@ -14,6 +14,7 @@ export default function KnowledgePage() {
   return (
     <>
       <PageHero
+        eyebrow="Strata Insights"
         title="Strata Knowledge Hub"
         subtitle="Plain-English answers to the questions strata committees and owners ask us most — grounded in NSW legislation and day-to-day practice."
         image="/images/BG3.png"
