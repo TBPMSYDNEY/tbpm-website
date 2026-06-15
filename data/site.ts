@@ -64,7 +64,7 @@ export const services: ServicePage[] = [
     metaTitle: "On-Site Building Management Sydney | TBPM",
     metaDescription:
       "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with 24/7 emergency support, contractor coordination and compliance reporting.",
-    heroImage: "/images/construction-workers.jpg",
+    heroImage: "/images/tbpm-building-manager-hero.jpg",
     cardImage: "/images/tbpm-icon-full-time-on-site.png",
     gallery: ["/images/9.png", "/images/8.png", "/images/7.png"],
     icon: "/images/tbpm-icon-full-time-on-site-white-2.png",
