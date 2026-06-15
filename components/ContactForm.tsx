@@ -27,13 +27,20 @@ const enquiryTypes = [
   "Other",
 ];
 
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
     const data = new FormData(e.currentTarget);
-    const lines = [
+    const message = [
       `Name: ${data.get("name")}`,
       `Role: ${data.get("role")}`,
       `Email: ${data.get("email")}`,
@@ -45,21 +52,46 @@ export default function ContactForm() {
       "",
       `${data.get("message")}`,
     ].join("\n");
-    const subject = encodeURIComponent(`Proposal request — ${data.get("building") || data.get("name")}`);
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${encodeURIComponent(lines)}`;
-    setSubmitted(true);
+
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: `Proposal request — ${data.get("building") || data.get("name")}`,
+      from_name: `${data.get("name")}`,
+      replyto: `${data.get("email")}`,
+      botcheck: data.get("botcheck") ? true : false,
+      message,
+    };
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError(result.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("We couldn't send your message. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
     return (
       <div className="rounded-3xl border border-brand/30 bg-brand-light p-10 text-center">
-        <h3 className="text-xl font-extrabold">Thanks — your email client should now be open.</h3>
+        <h3 className="text-xl font-extrabold">Thanks — your message has been sent.</h3>
         <p className="mt-3 text-sm leading-relaxed text-ink-mute">
-          If it didn&rsquo;t open, email us directly at{" "}
+          We&rsquo;ve received your enquiry and will respond within one business day. You can also
+          reach us at{" "}
           <a href={`mailto:${site.email}`} className="font-semibold text-brand-text">
             {site.email}
           </a>{" "}
-          or call {site.phone}. We&rsquo;ll respond within one business day.
+          or call {site.phone}.
         </p>
       </div>
     );
@@ -67,6 +99,14 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm font-semibold">
           Name *
@@ -161,9 +201,20 @@ export default function ContactForm() {
         </label>
         <input id="source" name="source" className={inputCls} placeholder="Google, referral, …" />
       </div>
+      {error && (
+        <div className="sm:col-span-2">
+          <p className="rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">
+            {error} You can also email us at{" "}
+            <a href={`mailto:${site.email}`} className="font-semibold underline">
+              {site.email}
+            </a>
+            .
+          </p>
+        </div>
+      )}
       <div className="sm:col-span-2">
-        <button type="submit" className="btn-primary w-full sm:w-auto">
-          Request a Proposal
+        <button type="submit" disabled={submitting} className="btn-primary w-full disabled:opacity-60 sm:w-auto">
+          {submitting ? "Sending…" : "Request a Proposal"}
         </button>
       </div>
     </form>
