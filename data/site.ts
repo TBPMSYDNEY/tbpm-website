@@ -298,7 +298,7 @@ export const services: ServicePage[] = [
       "Professional garden and landscape maintenance for Sydney strata buildings — lawns, hedging, irrigation, pest control and horticultural advice.",
     heroImage: "/images/unnamed.jpg",
     cardImage: "/images/tbpm-line-gardening.png",
-    gallery: ["/images/Untitled-300-x-250-px-1.png", "/images/e572530a490e0d8a67ffe165459ef00d.jpg"],
+    gallery: ["/images/tbpm-gardening-1.png", "/images/tbpm-gardening-2.png"],
     icon: "/images/tbpm-line-gardening-2.png",
     title: "Strata Gardening & Landscape Maintenance in Sydney",
     intro: [
