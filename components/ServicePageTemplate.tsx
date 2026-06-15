@@ -28,7 +28,12 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
 
   return (
     <>
-      <PageHero eyebrow="Our Services" title={service.title} image={service.heroImage} />
+      <PageHero
+        eyebrow="Our Services"
+        title={service.title}
+        image={service.heroImage}
+        variant={service.slug}
+      />
 
       {/* Intro */}
       <section className="py-16 sm:py-20">

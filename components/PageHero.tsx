@@ -1,15 +1,18 @@
 import Image from "next/image";
+import Hero3DLite from "@/components/Hero3DLite";
 
 export default function PageHero({
   title,
   subtitle,
   image,
   eyebrow,
+  variant,
 }: {
   title: string;
   subtitle?: string;
   image?: string;
   eyebrow?: string;
+  variant?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-ink grain">
@@ -18,13 +21,17 @@ export default function PageHero({
           src={image}
           alt=""
           fill
-          className="animate-hero-zoom object-cover opacity-25"
+          className="animate-hero-zoom object-cover opacity-[0.14]"
           priority
           sizes="100vw"
         />
       )}
-      {/* animated brand aurora for a premium, motion-rich backdrop */}
-      <div className="aurora pointer-events-none absolute inset-0 opacity-80" />
+      {/* live 3D motion backdrop — premium, varies per page */}
+      <div className="absolute inset-0">
+        <Hero3DLite variant={variant ?? title} />
+      </div>
+      {/* animated brand aurora layered over the 3D for added depth */}
+      <div className="aurora pointer-events-none absolute inset-0 opacity-60" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
