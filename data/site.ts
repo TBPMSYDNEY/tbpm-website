@@ -15,7 +15,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/company/tbpm/",
   },
   external: {
-    mybos: "https://app.mybos.com/",
+    mybos: "https://auth.mybos.com/login",
     buildingLink: "https://auth.buildinglink.com/",
   },
 };
