@@ -96,7 +96,7 @@ export default function Footer() {
                 {site.phone}
               </a>
             </li>
-            <li>{site.location}</li>
+            <li>{site.address}</li>
             <li className="text-white/50">{site.hours}</li>
           </ul>
         </div>
