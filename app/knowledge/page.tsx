@@ -2,17 +2,35 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Accordion from "@/components/Accordion";
 import Cta from "@/components/Cta";
+import JsonLd from "@/components/JsonLd";
 import { knowledgeItems } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Strata Knowledge & Resources | Sydney Buildings",
   description:
     "Plain-English guides to strata living in NSW — Owners Corporations, levies, fire safety, building defects, WHS, by-laws and the difference between building and strata managers.",
+  alternates: {
+    canonical: "/knowledge",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: knowledgeItems.map((item) => ({
+    "@type": "Question",
+    name: item.title,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.body,
+    },
+  })),
 };
 
 export default function KnowledgePage() {
   return (
     <>
+      <JsonLd data={faqSchema} />
       <PageHero
         eyebrow="Strata Insights"
         title="Strata Knowledge Hub"

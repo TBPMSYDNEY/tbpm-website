@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Our Services — Comprehensive Building Management Solutions",
   description:
     "TBPM delivers a full suite of building management services: on-site and hybrid building management, cleaning, gardening, concierge and project management across Sydney.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 const blurbs: Record<string, string> = {

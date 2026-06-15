@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "About TBPM | Sydney Strata Building Management Specialists",
   description:
     "TBPM combines professional building management with real construction expertise. Founded by two directors with 30+ years combined experience across Sydney strata buildings.",
+  alternates: {
+    canonical: "/about-us",
+  },
 };
 
 export default function AboutPage() {

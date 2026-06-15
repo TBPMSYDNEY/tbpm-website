@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Building Management Sydney | TBPM — Total Building & Property Management",
   description:
     "Sydney's trusted partner for building management, cleaning, gardening, concierge services and project management. We protect property assets and enhance resident satisfaction.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const serviceTeasers: Record<string, { blurb: string; fit?: string }> = {

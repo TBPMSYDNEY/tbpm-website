@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Contact TBPM | Request a Proposal",
   description:
     "Tell us about your building. We'll respond within one business day with a tailored proposal — or call (02) 7240 1700 if it's urgent.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
