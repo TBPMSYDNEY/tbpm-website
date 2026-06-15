@@ -362,7 +362,7 @@ export const services: ServicePage[] = [
       "Professional concierge services for Sydney residential and mixed-use buildings — front-of-house presence, parcel management, visitor coordination and amenity bookings.",
     heroImage: "/images/hotel-concierge.jpg",
     cardImage: "/images/tbpm-icon-concierge.png",
-    gallery: ["/images/9.png", "/images/tbpm-building-asset.jpg", "/images/7.png"],
+    gallery: ["/images/9.png", "/images/building-asset-lifecycle.jpg", "/images/7.png"],
     icon: "/images/tbpm-icon-concierge-white-2.png",
     title: "Concierge Services for Sydney Residential & Mixed-Use Buildings",
     intro: [
