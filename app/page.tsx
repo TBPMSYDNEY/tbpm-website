@@ -208,15 +208,14 @@ export default function HomePage() {
                     href={`/${s.slug}`}
                     className="card-premium group flex h-full flex-col overflow-hidden"
                   >
-                    <div className="relative aspect-[16/9] overflow-hidden">
+                    <div className="relative aspect-[16/9] overflow-hidden bg-white">
                       <Image
                         src={s.cardImage}
                         alt={s.navLabel}
                         fill
-                        className="object-cover transition duration-500 group-hover:scale-105"
+                        className="object-contain p-6 transition duration-500 group-hover:scale-105"
                         sizes="(min-width: 1024px) 24rem, (min-width: 768px) 50vw, 100vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink/30 to-transparent opacity-0 transition group-hover:opacity-100" />
                     </div>
                     <div className="flex flex-1 flex-col p-7">
                       <h3 className="text-lg font-bold transition group-hover:text-brand">
