@@ -27,7 +27,8 @@ const enquiryTypes = [
   "Other",
 ];
 
-const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+const WEB3FORMS_ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "2a33db22-26b6-4214-a03e-d43b5bd0ac8d";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
