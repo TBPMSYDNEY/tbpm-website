@@ -234,7 +234,7 @@ export const services: ServicePage[] = [
       "Structured strata cleaning programs for Sydney buildings — common areas, waste rooms, fire stairs and car parks, up to 7 days per week with vetted staff.",
     heroImage: "/images/shutterstock_2453839265-1.jpg",
     cardImage: "/images/tbpm-line-cleaning.png",
-    gallery: ["/images/19.png", "/images/20.png"],
+    gallery: ["/images/tbpm-cleaning-1.jpg", "/images/tbpm-cleaning-2.jpg", "/images/tbpm-cleaning-3.jpg"],
     icon: "/images/tbpm-line-cleaning-2.png",
     title: "Strata Cleaning Services for Sydney Buildings",
     intro: [
