@@ -17,7 +17,7 @@ export default function AboutPage() {
         eyebrow="Who We Are"
         title="About TBPM"
         subtitle="Professional building management, backed by real construction expertise."
-        image="/images/construction-workers.jpg"
+        image="/images/tbpm-about-hero.jpg"
       />
 
       {/* Our story */}
