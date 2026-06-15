@@ -159,10 +159,10 @@ export default function HomePage() {
       {/* About strip */}
       <section className="py-16 sm:py-24">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
-          <Reveal className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-[0_40px_80px_-40px_rgba(15,23,42,0.4)]">
+          <Reveal className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_40px_80px_-40px_rgba(15,23,42,0.4)]">
             <Image
-              src="/images/three-construction-workers-sitting-on-concrete-at-construction-site-discussing-building-plans.jpg"
-              alt="TBPM team reviewing building plans on site"
+              src="/images/tbpm-home-about.jpg"
+              alt="Modern Sydney residential tower managed by TBPM"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 36rem, 100vw"
