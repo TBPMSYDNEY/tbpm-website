@@ -66,7 +66,7 @@ export const services: ServicePage[] = [
       "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with 24/7 emergency support, contractor coordination and compliance reporting.",
     heroImage: "/images/construction-workers.jpg",
     cardImage: "/images/tbpm-icon-full-time-on-site.png",
-    gallery: ["/images/7.png", "/images/8.png", "/images/9.png"],
+    gallery: ["/images/9.png", "/images/8.png", "/images/7.png"],
     icon: "/images/tbpm-icon-full-time-on-site-white-2.png",
     title: "Full-Time On-Site Building Management",
     intro: [
@@ -153,7 +153,7 @@ export const services: ServicePage[] = [
       "Structured part-time and hybrid building management for 30–100 lot Sydney strata schemes — weekly rosters of 8–20 hours backed by remote office support.",
     heroImage: "/images/46993211_l-1-scaled-1.jpg",
     cardImage: "/images/tbpm-icon-part-time-hybrid.png",
-    gallery: ["/images/10.png", "/images/11.png", "/images/Untitled-design-6.png"],
+    gallery: ["/images/10.png", "/images/Untitled-design-6.png", "/images/11.png"],
     icon: "/images/tbpm-icon-part-time-hybrid-white-2.png",
     title: "Part-Time & Hybrid Building Management",
     intro: [
@@ -362,7 +362,7 @@ export const services: ServicePage[] = [
       "Professional concierge services for Sydney residential and mixed-use buildings — front-of-house presence, parcel management, visitor coordination and amenity bookings.",
     heroImage: "/images/hotel-concierge.jpg",
     cardImage: "/images/tbpm-icon-concierge.png",
-    gallery: ["/images/Untitled-300-x-250-px-3.png", "/images/7.png", "/images/9.png"],
+    gallery: ["/images/9.png", "/images/Untitled-300-x-250-px-3.png", "/images/7.png"],
     icon: "/images/tbpm-icon-concierge-white-2.png",
     title: "Concierge Services for Sydney Residential & Mixed-Use Buildings",
     intro: [
