@@ -153,7 +153,7 @@ export const services: ServicePage[] = [
       "Structured part-time and hybrid building management for 30–100 lot Sydney strata schemes — weekly rosters of 8–20 hours backed by remote office support.",
     heroImage: "/images/46993211_l-1-scaled-1.jpg",
     cardImage: "/images/tbpm-icon-part-time-hybrid.png",
-    gallery: ["/images/10.png", "/images/Untitled-design-6.png", "/images/11.png"],
+    gallery: ["/images/9.png", "/images/tbpm-building-asset.jpg", "/images/7.png"],
     icon: "/images/tbpm-icon-part-time-hybrid-white-2.png",
     title: "Part-Time & Hybrid Building Management",
     intro: [
