@@ -440,7 +440,7 @@ export const services: ServicePage[] = [
       "Strata project management for Sydney buildings — defect rectification, capital works and common-area upgrades managed by construction-experienced teams.",
     heroImage: "/images/construction-project-management-guide-768x432-1.jpg",
     cardImage: "/images/tbpm-line-project-management.png",
-    gallery: ["/images/14.png", "/images/15.png"],
+    gallery: ["/images/tbpm-project-management-1.jpg", "/images/tbpm-project-management-2.png"],
     icon: "/images/tbpm-line-project-management-2.png",
     title: "Strata Project Management & Defect Works in Sydney",
     intro: [
