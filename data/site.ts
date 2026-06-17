@@ -61,7 +61,7 @@ export const services: ServicePage[] = [
   {
     slug: "on-site-building-management",
     navLabel: "Full-Time On-Site Building Management",
-    metaTitle: "On-Site Building Management Sydney | TBPM",
+    metaTitle: "On-Site Building Management Sydney",
     metaDescription:
       "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with 24/7 emergency support, contractor coordination and compliance reporting.",
     heroImage: "/images/tbpm-building-manager-hero.jpg",
@@ -148,7 +148,7 @@ export const services: ServicePage[] = [
   {
     slug: "remote-building-management",
     navLabel: "Part-Time / Hybrid Building Management",
-    metaTitle: "Part-Time & Hybrid Building Management Sydney | TBPM",
+    metaTitle: "Part-Time & Hybrid Building Management Sydney",
     metaDescription:
       "Structured part-time and hybrid building management for 30–100 lot Sydney strata schemes — weekly rosters of 8–20 hours backed by remote office support.",
     heroImage: "/images/46993211_l-1-scaled-1.jpg",
@@ -229,7 +229,7 @@ export const services: ServicePage[] = [
   {
     slug: "cleaning-services",
     navLabel: "Cleaning Services",
-    metaTitle: "Strata Cleaning Services Sydney | TBPM",
+    metaTitle: "Strata Cleaning Services Sydney",
     metaDescription:
       "Structured strata cleaning programs for Sydney buildings — common areas, waste rooms, fire stairs and car parks, up to 7 days per week with vetted staff.",
     heroImage: "/images/shutterstock_2453839265-1.jpg",
@@ -293,7 +293,7 @@ export const services: ServicePage[] = [
   {
     slug: "gardening-services",
     navLabel: "Gardening Services",
-    metaTitle: "Strata Gardening & Landscape Maintenance Sydney | TBPM",
+    metaTitle: "Strata Gardening & Landscape Maintenance Sydney",
     metaDescription:
       "Professional garden and landscape maintenance for Sydney strata buildings — lawns, hedging, irrigation, pest control and horticultural advice.",
     heroImage: "/images/unnamed.jpg",
@@ -357,7 +357,7 @@ export const services: ServicePage[] = [
   {
     slug: "concierge-services",
     navLabel: "Concierge Services",
-    metaTitle: "Concierge Services Sydney | TBPM",
+    metaTitle: "Concierge Services Sydney",
     metaDescription:
       "Professional concierge services for Sydney residential and mixed-use buildings — front-of-house presence, parcel management, visitor coordination and amenity bookings.",
     heroImage: "/images/hotel-concierge.jpg",
@@ -435,7 +435,7 @@ export const services: ServicePage[] = [
   {
     slug: "project-management",
     navLabel: "Project Management",
-    metaTitle: "Strata Project Management & Defect Works Sydney | TBPM",
+    metaTitle: "Strata Project Management & Defect Works Sydney",
     metaDescription:
       "Strata project management for Sydney buildings — defect rectification, capital works and common-area upgrades managed by construction-experienced teams.",
     heroImage: "/images/construction-project-management-guide-768x432-1.jpg",
