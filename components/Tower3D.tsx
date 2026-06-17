@@ -25,9 +25,12 @@ export default function Tower3D() {
     const mount = mountRef.current;
     if (!mount) return;
 
-    const prefersReduced =
+    // Static single frame on reduced-motion or small screens — avoids running
+    // a second continuous WebGL render loop on mobile (protects CWV).
+    const staticMode =
       typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        window.matchMedia("(max-width: 768px)").matches);
 
     const INK = new THREE.Color("#16140f");
     const BRAND = new THREE.Color("#00bf63");
@@ -225,7 +228,7 @@ export default function Tower3D() {
     const renderFrame = () => {
       const t = clock.getElapsedTime();
 
-      if (!prefersReduced) {
+      if (!staticMode) {
         spin += 0.0016;
         particles.rotation.y = t * 0.05;
         const pp = pGeo.attributes.position as THREE.BufferAttribute;
@@ -257,7 +260,7 @@ export default function Tower3D() {
       raf = requestAnimationFrame(animate);
     };
 
-    if (prefersReduced) {
+    if (staticMode) {
       renderFrame();
     } else {
       animate();
@@ -267,7 +270,7 @@ export default function Tower3D() {
       if (document.hidden) {
         running = false;
         cancelAnimationFrame(raf);
-      } else if (!prefersReduced) {
+      } else if (!staticMode) {
         running = true;
         clock.getDelta();
         animate();
@@ -278,7 +281,7 @@ export default function Tower3D() {
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (!running && !prefersReduced && !document.hidden) {
+          if (!running && !staticMode && !document.hidden) {
             running = true;
             animate();
           }
