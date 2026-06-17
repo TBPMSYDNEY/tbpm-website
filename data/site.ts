@@ -586,6 +586,14 @@ export const knowledgeItems = [
     ],
   },
   {
+    title: "Combustible Cladding & Project Remediate",
+    body: "Following the Grenfell Tower fire, the NSW Cladding Taskforce assessed over 4,000 buildings and identified roughly 225 high-risk residential apartment buildings that need combustible cladding removed. Project Remediate is a voluntary, three-year NSW Government program that supports affected strata communities through 10-year interest-free loans (the government pays the interest), plus fully funded project management and quality assurance — from building assessment and design through to remediation and a Project Remediate Assurance Certificate. Repayments are quarterly, in line with strata levies, and only begin after the work is complete. To be eligible, a building must be a Class 2 residential apartment building in NSW confirmed by the Cladding Taskforce as having high-risk combustible cladding. Registering interest carries no obligation, and hardship provisions exist for owner-occupiers. The guide below explains how the program works, eligibility, the owner journey and what to expect.",
+    links: [
+      { label: "Apartment owners guide to Project Remediate (PDF)", href: "https://www.nsw.gov.au/sites/default/files/2021-06/apartment-owners-guide-to-project-remediate.pdf" },
+      { label: "Project Remediate (NSW Government)", href: "https://www.nsw.gov.au/project-remediate" },
+    ],
+  },
+  {
     title: "Work Health & Safety on Common Property",
     body: "Under NSW work health and safety law, an Owners Corporation is a person conducting a business or undertaking (PCBU) and has legal duties to keep common property safe for residents, visitors and contractors. In practice that means verifying contractor licences and insurances and obtaining Safe Work Method Statements (SWMS) before any work begins on site.",
     links: [
