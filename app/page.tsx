@@ -62,7 +62,7 @@ const valueProps = [
 
 const trustPills = [
   "30+ years combined experience",
-  "Fully insured & police-vetted",
+  "Fully insured & vetted",
   "Sydney-wide coverage",
 ];
 
@@ -160,10 +160,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About strip */}
-      <section className="py-16 sm:py-24">
-        <div className="container-site grid items-center gap-12 lg:grid-cols-2">
-          <Reveal className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_40px_80px_-40px_rgba(15,23,42,0.4)]">
+      {/* About + 3D motion showcase — combined premium centrepiece */}
+      <section className="relative overflow-hidden bg-ink grain">
+        <div className="absolute inset-0">
+          <Tower3D />
+        </div>
+        {/* depth + legibility overlays over the live 3D */}
+        <div className="aurora pointer-events-none absolute inset-0 opacity-50" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/20" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-ink to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink to-transparent" />
+
+        <div className="container-site relative grid items-center gap-12 py-24 sm:py-28 lg:grid-cols-2">
+          <Reveal className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_40px_80px_-40px_rgba(0,0,0,0.6)] ring-1 ring-white/10">
             <Image
               src="/images/tbpm-home-about.jpg"
               alt="Modern Sydney residential tower managed by TBPM"
@@ -172,50 +181,22 @@ export default function HomePage() {
               sizes="(min-width: 1024px) 36rem, 100vw"
             />
           </Reveal>
-          <Reveal delay={120}>
-            <span className="section-label">About TBPM</span>
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Your Building. Our Commitment.
+          <Reveal delay={120} className="max-w-xl">
+            <span className="section-label text-brand">About TBPM</span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              Your building, understood — <span className="text-gradient-brand">floor by floor.</span>
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-ink-mute">
+            <p className="mt-5 text-lg leading-relaxed text-white/75">
               TBPM is a Sydney-based building management company founded by professionals with more
               than 30 years of combined experience in building management and construction. We
               service residential, commercial and mixed-use strata properties — bringing real
               construction knowledge to the day-to-day care of your building.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-ink-mute">
-              That construction background matters: when defects appear or contractors quote, your
-              committee gets advice from people who know what the work should actually cost.
-            </p>
-            <Link href="/about-us" className="btn-secondary mt-8">
-              More About Us
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 3D motion showcase — premium living centrepiece */}
-      <section className="relative overflow-hidden bg-ink grain">
-        <div className="absolute inset-0">
-          <Tower3D />
-        </div>
-        {/* depth + legibility overlays over the live 3D */}
-        <div className="aurora pointer-events-none absolute inset-0 opacity-50" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-ink to-transparent" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink to-transparent" />
-
-        <div className="container-site relative flex min-h-[34rem] flex-col justify-center py-24 sm:py-28">
-          <Reveal className="max-w-xl">
-            <span className="section-label text-brand">A living view of your asset</span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              We see buildings the way they&rsquo;re built — <span className="text-gradient-brand">floor by floor.</span>
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-white/75">
-              Our founders come from construction, not just administration. That means every slab,
+            <p className="mt-4 text-lg leading-relaxed text-white/75">
+              Because our founders come from construction, not just administration, every slab,
               façade and service riser is understood as part of a whole — so defects are caught early,
-              capital works are scoped accurately, and your building&rsquo;s value is protected for the
-              long term.
+              contractors are quoted against what work should actually cost, and your building&rsquo;s
+              value is protected for the long term.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
               {trustPills.map((p) => (
