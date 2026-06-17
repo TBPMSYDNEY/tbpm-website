@@ -5,6 +5,7 @@ import { services, whyChoose, testimonial, site } from "@/data/site";
 import Cta from "@/components/Cta";
 import HomePopup from "@/components/HomePopup";
 import Hero3D from "@/components/Hero3D";
+import Tower3D from "@/components/Tower3D";
 import Reveal from "@/components/Reveal";
 import Stat from "@/components/Stat";
 
@@ -188,6 +189,58 @@ export default function HomePage() {
             </p>
             <Link href="/about-us" className="btn-secondary mt-8">
               More About Us
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 3D motion showcase — premium living centrepiece */}
+      <section className="relative overflow-hidden bg-ink grain">
+        <div className="absolute inset-0">
+          <Tower3D />
+        </div>
+        {/* depth + legibility overlays over the live 3D */}
+        <div className="aurora pointer-events-none absolute inset-0 opacity-50" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-ink to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink to-transparent" />
+
+        <div className="container-site relative flex min-h-[34rem] flex-col justify-center py-24 sm:py-28">
+          <Reveal className="max-w-xl">
+            <span className="section-label text-brand">A living view of your asset</span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              We see buildings the way they&rsquo;re built — <span className="text-gradient-brand">floor by floor.</span>
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-white/75">
+              Our founders come from construction, not just administration. That means every slab,
+              façade and service riser is understood as part of a whole — so defects are caught early,
+              capital works are scoped accurately, and your building&rsquo;s value is protected for the
+              long term.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              {trustPills.map((p) => (
+                <span
+                  key={p}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white/70"
+                >
+                  <svg
+                    className="h-4 w-4 text-brand"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4l3.3 3.29 6.8-6.8a1 1 0 011.4 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  {p}
+                </span>
+              ))}
+            </div>
+            <Link href="/about-us" className="btn-primary mt-9 w-fit">
+              The TBPM Difference
             </Link>
           </Reveal>
         </div>
