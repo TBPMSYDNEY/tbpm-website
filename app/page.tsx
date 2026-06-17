@@ -10,9 +10,9 @@ import Reveal from "@/components/Reveal";
 import Stat from "@/components/Stat";
 
 export const metadata: Metadata = {
-  title: "Building Management Sydney | TBPM — Total Building & Property Management",
+  title: "Sydney Building Management & Strata Services | TBPM",
   description:
-    "Sydney's trusted partner for building management, cleaning, gardening, concierge services and project management. We protect property assets and enhance resident satisfaction.",
+    "Sydney's trusted partner for building management, cleaning, gardening, concierge and project management — protecting your property assets and residents.",
   alternates: {
     canonical: "/",
   },
