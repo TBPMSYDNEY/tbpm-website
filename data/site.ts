@@ -132,7 +132,7 @@ export const services: ServicePage[] = [
       },
       {
         title: "Fully insured & vetted staff",
-        description: "Public Liability and Workers Compensation cover, with police-checked personnel.",
+        description: "Public Liability and Workers Compensation cover, with vetted personnel.",
       },
       {
         title: "Local Sydney operations",
@@ -214,7 +214,7 @@ export const services: ServicePage[] = [
       },
       {
         title: "Fully insured & vetted staff",
-        description: "Public Liability and Workers Compensation cover, with police-checked personnel.",
+        description: "Public Liability and Workers Compensation cover, with vetted personnel.",
       },
       {
         title: "Local to Sydney",
@@ -248,7 +248,7 @@ export const services: ServicePage[] = [
       "Waste room and bin area management",
       "External area upkeep — entrances, footpaths and pathways",
       "Fire stairs and car park cleaning",
-      "Consistent, vetted staff with police checks",
+      "Consistent, vetted staff",
       "Environmentally responsible cleaning products",
       "Quarterly committee performance reviews",
     ],
@@ -278,7 +278,7 @@ export const services: ServicePage[] = [
       },
       {
         title: "Fully insured & vetted personnel",
-        description: "Police-checked staff with full insurance coverage.",
+        description: "Vetted staff with full insurance coverage.",
       },
       {
         title: "Local Sydney coverage",
@@ -419,7 +419,7 @@ export const services: ServicePage[] = [
         description: "Front-of-house staff who reflect the standard of your building.",
       },
       {
-        title: "Fully insured & police-vetted staff",
+        title: "Fully insured & vetted staff",
         description: "Every team member vetted and covered.",
       },
       {
