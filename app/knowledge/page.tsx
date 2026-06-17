@@ -36,6 +36,7 @@ export default function KnowledgePage() {
         title="Strata Knowledge Hub"
         subtitle="Plain-English answers to the questions strata committees and owners ask us most — grounded in NSW legislation and day-to-day practice."
         image="/images/BG3.png"
+        imageAlt="Sydney strata apartment buildings"
       />
 
       <section className="py-16 sm:py-24">

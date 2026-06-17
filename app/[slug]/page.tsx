@@ -24,6 +24,18 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${service.slug}`,
     },
+    openGraph: {
+      title: service.metaTitle,
+      description: service.metaDescription,
+      url: `https://tbpm.com.au/${service.slug}`,
+      images: [{ url: service.heroImage, alt: service.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: service.metaTitle,
+      description: service.metaDescription,
+      images: [service.heroImage],
+    },
   };
 }
 
@@ -47,9 +59,25 @@ export default async function ServiceRoute({
     provider: { "@id": "https://tbpm.com.au/#organization" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://tbpm.com.au" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://tbpm.com.au/services" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.navLabel,
+        item: `https://tbpm.com.au/${service.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <ServicePageTemplate service={service} />
     </>
   );

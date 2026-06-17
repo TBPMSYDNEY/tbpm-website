@@ -20,6 +20,7 @@ export default function ContactPage() {
         title="Tell us about your building."
         subtitle="We'll respond within one business day with a tailored proposal — or call the number below if it's urgent."
         image="/images/office-building.jpg"
+        imageAlt="Sydney office and residential building exterior"
       />
 
       <section className="py-16 sm:py-24">

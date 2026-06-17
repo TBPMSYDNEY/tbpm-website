@@ -21,6 +21,7 @@ export default function AboutPage() {
         title="About TBPM"
         subtitle="Professional building management, backed by real construction expertise."
         image="/images/tbpm-about-hero.jpg"
+        imageAlt="TBPM building management team servicing a Sydney strata property"
       />
 
       {/* Our story */}

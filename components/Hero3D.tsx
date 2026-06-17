@@ -23,9 +23,13 @@ export default function Hero3D() {
     const mount = mountRef.current;
     if (!mount) return;
 
-    const prefersReduced =
+    // Render a single static frame (no continuous render loop) when the user
+    // prefers reduced motion OR is on a small screen — the animation loop is
+    // the main mobile performance cost (INP/TBT) on the most important page.
+    const staticMode =
       typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        window.matchMedia("(max-width: 768px)").matches);
 
     const INK = new THREE.Color("#2a271f");
     const BRAND = new THREE.Color("#00bf63");
@@ -163,7 +167,7 @@ export default function Hero3D() {
     const writeInstances = (t: number) => {
       for (let c = 0; c < cells.length; c++) {
         const cell = cells[c];
-        const wobble = prefersReduced ? 0 : Math.sin(t * 1.1 + cell.phase) * 0.5 + 0.5;
+        const wobble = staticMode ? 0 : Math.sin(t * 1.1 + cell.phase) * 0.5 + 0.5;
         const h = cell.base + wobble * (1.4 + cell.dist * 0.12);
         dummy.position.set(cell.x, 0, cell.z);
         dummy.scale.set(0.86, h, 0.86);
@@ -181,7 +185,7 @@ export default function Hero3D() {
       const t = clock.getElapsedTime();
       writeInstances(t);
 
-      if (!prefersReduced) {
+      if (!staticMode) {
         group.rotation.y = t * 0.05;
         particles.rotation.y = -t * 0.02;
         const pos = pGeo.attributes.position as THREE.BufferAttribute;
@@ -209,7 +213,7 @@ export default function Hero3D() {
       raf = requestAnimationFrame(animate);
     };
 
-    if (prefersReduced) {
+    if (staticMode) {
       renderFrame(); // single static frame
     } else {
       animate();
@@ -220,7 +224,7 @@ export default function Hero3D() {
       if (document.hidden) {
         running = false;
         cancelAnimationFrame(raf);
-      } else if (!prefersReduced) {
+      } else if (!staticMode) {
         running = true;
         clock.getDelta();
         animate();
@@ -232,7 +236,7 @@ export default function Hero3D() {
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (!running && !prefersReduced && !document.hidden) {
+          if (!running && !staticMode && !document.hidden) {
             running = true;
             animate();
           }

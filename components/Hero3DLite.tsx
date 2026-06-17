@@ -28,9 +28,12 @@ export default function Hero3DLite({ variant = "default" }: { variant?: string }
     const mount = mountRef.current;
     if (!mount) return;
 
-    const prefersReduced =
+    // Static single frame on reduced-motion or small screens — avoids the
+    // continuous render loop's main-thread cost on mobile.
+    const staticMode =
       typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        window.matchMedia("(max-width: 768px)").matches);
 
     // ---- Deterministic per-variant parameters --------------------------
     let seed = 0;
@@ -168,7 +171,7 @@ export default function Hero3DLite({ variant = "default" }: { variant?: string }
 
     const renderFrame = () => {
       const t = clock.getElapsedTime() * speed;
-      if (!prefersReduced) {
+      if (!staticMode) {
         writeWave(t);
         particles.rotation.y = -t * 0.03;
         const pp = pGeo.attributes.position as THREE.BufferAttribute;
@@ -195,7 +198,7 @@ export default function Hero3DLite({ variant = "default" }: { variant?: string }
       raf = requestAnimationFrame(animate);
     };
 
-    if (prefersReduced) {
+    if (staticMode) {
       renderFrame();
     } else {
       animate();
@@ -205,7 +208,7 @@ export default function Hero3DLite({ variant = "default" }: { variant?: string }
       if (document.hidden) {
         running = false;
         cancelAnimationFrame(raf);
-      } else if (!prefersReduced) {
+      } else if (!staticMode) {
         running = true;
         clock.getDelta();
         animate();
@@ -216,7 +219,7 @@ export default function Hero3DLite({ variant = "default" }: { variant?: string }
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (!running && !prefersReduced && !document.hidden) {
+          if (!running && !staticMode && !document.hidden) {
             running = true;
             animate();
           }

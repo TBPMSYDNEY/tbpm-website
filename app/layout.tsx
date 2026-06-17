@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import JsonLd from "@/components/JsonLd";
+import Analytics from "@/components/Analytics";
 import { site } from "@/data/site";
 
 const organizationSchema = {
@@ -57,14 +58,17 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tbpm.com.au"),
   title: {
-    default: "TBPM | Building Management Sydney — Total Building & Property Management",
+    default: "Sydney Building Management & Strata Services | TBPM",
     template: "%s | TBPM",
   },
   description:
-    "Sydney's trusted partner for building management, cleaning, gardening, concierge services and project management. We protect property assets and enhance resident satisfaction.",
+    "Sydney's trusted partner for building management, cleaning, gardening, concierge and project management — protecting your property assets and residents.",
   icons: {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
   alternates: {
     canonical: "/",
@@ -96,6 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-AU" className={`${inter.variable} ${fraunces.variable}`}>
       <body>
+        <Analytics />
         <JsonLd data={organizationSchema} />
         <ScrollProgress />
         <Header />

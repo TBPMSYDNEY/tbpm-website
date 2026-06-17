@@ -5,12 +5,14 @@ export default function PageHero({
   title,
   subtitle,
   image,
+  imageAlt,
   eyebrow,
   variant,
 }: {
   title: string;
   subtitle?: string;
   image?: string;
+  imageAlt?: string;
   eyebrow?: string;
   variant?: string;
 }) {
@@ -19,7 +21,7 @@ export default function PageHero({
       {image && (
         <Image
           src={image}
-          alt=""
+          alt={imageAlt ?? ""}
           fill
           className="animate-hero-zoom object-cover opacity-[0.14]"
           priority
