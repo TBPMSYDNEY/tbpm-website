@@ -17,7 +17,7 @@ const offers = [
   },
   {
     title: "Free Dedicated Building Website",
-    text: "A professional website on your building's own domain, hosting all notices, contacts and building information — set up and maintained by TBPM for the life of the agreement.",
+    text: "Any building that signs up gets a professional website on its own domain — hosting all notices, contacts and building information, set up and maintained by TBPM for the life of the agreement.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
         <rect x="2" y="4" width="20" height="14" rx="2" />
@@ -35,6 +35,17 @@ const offers = [
           strokeLinecap="round"
           strokeLinejoin="round"
         />
+      </svg>
+    ),
+  },
+  {
+    title: "Free Deep Cleaning — New Cleaning Contracts",
+    text: "Engage TBPM for cleaning and we'll throw in a complementary deep clean to start the contract right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
+        <path d="M12 3l1.6 3.4L17 8l-3.4 1.6L12 13l-1.6-3.4L7 8l3.4-1.6z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M5 16l.9 1.9L8 19l-2.1.9L5 22l-.9-2.1L2 19l2.1-1.1z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M18 14l.7 1.5L20 16l-1.3.7L18 18l-.7-1.3L16 16l1.3-.5z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -142,10 +153,16 @@ export default function HomePopup() {
           onClick={close}
           className="mt-6 block w-full rounded-md bg-brand px-6 py-3.5 text-center font-semibold text-white transition hover:bg-brand-dark"
         >
-          Request A Proposal
+          Claim Your Free Offers
         </Link>
 
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs text-slate-500">
+        <p className="mt-4 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-left text-[11px] leading-relaxed text-slate-500">
+          Offers apply to new management or cleaning agreements only. Handyman &amp; deep cleaning hours redeemable within
+          the first 90 days of engagement; materials &amp; specialist consumables excluded. Website hosting &amp;
+          maintenance included for the term of the agreement.
+        </p>
+
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs text-slate-500">
           <span>tbpm.com.au</span>
           <a href={site.phoneHref} className="hover:text-brand">
             {site.phone}
