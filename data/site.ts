@@ -612,8 +612,7 @@ export const knowledgeItems = [
     title: "Building Manager vs Strata Manager — What's the Difference?",
     body: "Well-run buildings usually have both. A strata manager (licensed in NSW) handles administration and governance — issuing levies, arranging insurance, organising meetings, keeping records and ensuring compliance — typically from an office while managing multiple schemes. A building manager (caretaker / facilities manager) looks after the physical building — an on-site presence coordinating contractors, monitoring common areas, organising maintenance and dealing with residents. In short, the strata manager handles the paperwork and finances; the building manager looks after the infrastructure and the people.",
     links: [
-      { label: "Strata in NSW — overview", href: "https://www.nsw.gov.au/housing-and-construction/strata" },
-      { label: "Strata living guide", href: "https://www.nsw.gov.au/housing-and-construction/strata/strata-living-guide" },
+      { label: "Strata roles & responsibilities (NSW)", href: "https://www.nsw.gov.au/housing-and-construction/strata/roles" },
     ],
   },
 ];
