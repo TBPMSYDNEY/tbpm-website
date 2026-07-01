@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 const offers = [
   {
-    title: "Free Energy & Financial Audit",
+    title: "Complimentary Energy & Financial Audit",
     text: "We audit your building's energy use, service contracts and recurring costs to find savings — so your management fee partly pays for itself.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
@@ -16,7 +16,7 @@ const offers = [
     ),
   },
   {
-    title: "Free Dedicated Building Website",
+    title: "Complimentary Dedicated Building Website",
     text: "Any building that signs up gets a professional website on its own domain — hosting all notices, contacts and building information, set up and maintained by TBPM for the life of the agreement.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
@@ -26,7 +26,7 @@ const offers = [
     ),
   },
   {
-    title: "8 Hours Free Handyman Service — 100+ Lot Buildings",
+    title: "8 Hours Complimentary Handyman Service — 100+ Lot Buildings",
     text: "Buildings with 100+ lots receive 8 hours of general experienced trade work on us — ideal for chasing defect liability items at handover or knocking over a backlog of ongoing maintenance jobs.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
@@ -39,8 +39,8 @@ const offers = [
     ),
   },
   {
-    title: "Free Deep Cleaning — New Cleaning Contracts",
-    text: "Engage TBPM for cleaning and we'll throw in a complementary deep clean to start the contract right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
+    title: "Complimentary Deep Cleaning — New Cleaning Contracts",
+    text: "Engage TBPM for cleaning and we'll throw in a complimentary deep clean to start the contract right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
         <path d="M12 3l1.6 3.4L17 8l-3.4 1.6L12 13l-1.6-3.4L7 8l3.4-1.6z" strokeLinecap="round" strokeLinejoin="round" />
@@ -131,7 +131,7 @@ export default function HomePopup() {
           <br className="hidden sm:block" /> fee pay for itself.
         </h2>
         <p className="mx-auto mt-3 max-w-md text-center text-slate-600">
-          Every new building that engages TBPM starts with a free Energy and Financial Audit.
+          Every new building that engages TBPM starts with a complimentary Energy and Financial Audit.
         </p>
 
         <div className="mt-6 space-y-4">
@@ -153,7 +153,7 @@ export default function HomePopup() {
           onClick={close}
           className="mt-6 block w-full rounded-md bg-brand px-6 py-3.5 text-center font-semibold text-white transition hover:bg-brand-dark"
         >
-          Claim Your Free Offers
+          Claim Your Complimentary Offers
         </Link>
 
         <p className="mt-4 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-left text-[11px] leading-relaxed text-slate-500">
