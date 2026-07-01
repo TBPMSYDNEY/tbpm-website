@@ -45,7 +45,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
               </p>
             ))}
             <Link href="/contact" className="btn-primary !mt-8">
-              Book Your Free Site Assessment
+              Book Your Complimentary Site Assessment
             </Link>
           </Reveal>
           <Reveal
@@ -69,7 +69,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
           <div className="container-site">
             <span className="section-label">Included at no cost</span>
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Your Free Onboarding Package
+              Your Complimentary Onboarding Package
             </h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {service.onboarding.map((o, i) => (

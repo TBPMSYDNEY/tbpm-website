@@ -75,17 +75,17 @@ export const services: ServicePage[] = [
     ],
     onboarding: [
       {
-        title: "Free Energy & Financial Audit",
+        title: "Complimentary Energy & Financial Audit",
         description:
           "We identify cost savings in your building's energy use and service contracts at the start of every engagement.",
       },
       {
-        title: "8 Hours Free Handyman Service Monthly",
+        title: "8 Hours Complimentary Handyman Service Monthly",
         description:
           "Minor maintenance on common property each month — excludes licensed trades, works within individual lots, and capital projects. Available for 100+ lot buildings.",
       },
       {
-        title: "Free Dedicated Building Website",
+        title: "Complimentary Dedicated Building Website",
         description:
           "A professionally hosted website for your building with domain and hosting included — for resident information, notices and building updates.",
       },
@@ -107,7 +107,7 @@ export const services: ServicePage[] = [
     ],
     process: [
       {
-        title: "Free site assessment",
+        title: "Complimentary site assessment",
         description: "We inspect your building and meet your committee — no cost, no obligation.",
       },
       {
@@ -162,7 +162,7 @@ export const services: ServicePage[] = [
     ],
     onboarding: [
       {
-        title: "Free Energy & Financial Audit",
+        title: "Complimentary Energy & Financial Audit",
         description:
           "We identify cost savings in your building's energy use and service contracts at the start of every engagement.",
       },
@@ -172,7 +172,7 @@ export const services: ServicePage[] = [
           "Comprehensive documentation of your building's plant, equipment and major components.",
       },
       {
-        title: "Free Dedicated Building Website",
+        title: "Complimentary Dedicated Building Website",
         description:
           "A permanent, professionally hosted site for notices and building information — included at no cost.",
       },
@@ -190,7 +190,7 @@ export const services: ServicePage[] = [
     ],
     process: [
       {
-        title: "Free site assessment",
+        title: "Complimentary site assessment",
         description: "We inspect your building and meet your committee — no cost, no obligation.",
       },
       {
@@ -254,7 +254,7 @@ export const services: ServicePage[] = [
     ],
     process: [
       {
-        title: "Free building assessment",
+        title: "Complimentary building assessment",
         description: "We walk your building and assess its cleaning requirements — no obligation.",
       },
       {
@@ -318,7 +318,7 @@ export const services: ServicePage[] = [
     ],
     process: [
       {
-        title: "Free assessment",
+        title: "Complimentary assessment",
         description: "We review your property's grounds at no cost.",
       },
       {
@@ -371,7 +371,7 @@ export const services: ServicePage[] = [
     ],
     onboarding: [
       {
-        title: "Free Energy & Financial Audit",
+        title: "Complimentary Energy & Financial Audit",
         description: "We identify operational cost reductions at the start of every engagement.",
       },
       {
@@ -379,7 +379,7 @@ export const services: ServicePage[] = [
         description: "Comprehensive documentation of equipment and major components.",
       },
       {
-        title: "Free Dedicated Building Website",
+        title: "Complimentary Dedicated Building Website",
         description: "Custom domain with hosting and annual renewal included.",
       },
     ],
@@ -396,7 +396,7 @@ export const services: ServicePage[] = [
     ],
     process: [
       {
-        title: "Free site assessment",
+        title: "Complimentary site assessment",
         description: "We assess your lobby operations and resident needs — no obligation.",
       },
       {
