@@ -61,7 +61,7 @@ const valueProps = [
   {
     title: "Complimentary Deep Cleaning — New Cleaning Contracts",
     description:
-      "Engage TBPM for cleaning and we'll throw in a complimentary deep clean to start the contract right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
+      "Engage TBPM for cleaning and we'll start you off with a complimentary deep clean to set the contract up right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
   },
 ];
 

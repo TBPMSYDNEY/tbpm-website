@@ -40,7 +40,7 @@ const offers = [
   },
   {
     title: "Complimentary Deep Cleaning — New Cleaning Contracts",
-    text: "Engage TBPM for cleaning and we'll throw in a complimentary deep clean to start the contract right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
+    text: "Engage TBPM for cleaning and we'll start you off with a complimentary deep clean to set the contract up right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
         <path d="M12 3l1.6 3.4L17 8l-3.4 1.6L12 13l-1.6-3.4L7 8l3.4-1.6z" strokeLinecap="round" strokeLinejoin="round" />
