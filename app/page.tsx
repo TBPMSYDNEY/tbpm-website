@@ -44,19 +44,24 @@ const serviceTeasers: Record<string, { blurb: string; fit?: string }> = {
 
 const valueProps = [
   {
-    title: "Free Energy & Financial Audit",
+    title: "Complimentary Energy & Financial Audit",
     description:
       "We review your building's energy use and service contracts to find savings — included with every management engagement.",
   },
   {
-    title: "Free Dedicated Building Website",
+    title: "Complimentary Dedicated Building Website",
     description:
       "A professionally hosted website for your building, with domain and hosting included, for resident notices and information.",
   },
   {
-    title: "8 Hours Free Handyman Service",
+    title: "8 Hours Complimentary Handyman Service",
     description:
       "Monthly minor maintenance on common property, included for 100+ lot buildings.",
+  },
+  {
+    title: "Complimentary Deep Cleaning — New Cleaning Contracts",
+    description:
+      "Engage TBPM for cleaning and we'll throw in a complimentary deep clean to start the contract right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
   },
 ];
 
@@ -328,9 +333,9 @@ export default function HomePage() {
               Make your management fee pay for itself.
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {valueProps.map((v, i) => (
-              <Reveal key={v.title} className="card-premium p-8" delay={(i % 3) * 90}>
+              <Reveal key={v.title} className="card-premium p-8" delay={(i % 4) * 90}>
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light">
                   <svg
                     className="h-6 w-6 text-brand"
