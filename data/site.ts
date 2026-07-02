@@ -241,6 +241,13 @@ export const services: ServicePage[] = [
       "A clean building is a well-managed building. TBPM delivers structured cleaning programs designed around your building's size, traffic and amenities — not a one-size-fits-all schedule.",
       "Our cleaners are another set of eyes on the building — flagging leaks, damage and maintenance issues early, before they become expensive problems.",
     ],
+    onboarding: [
+      {
+        title: "Complimentary Deep Cleaning — New Cleaning Contracts",
+        description:
+          "Engage TBPM for cleaning and we'll throw in a complimentary deep clean to start the contract right — 10 hours for full-time cleaning sites, 5 hours for part-time sites.",
+      },
+    ],
     included: [
       "Customised cleaning schedules based on your building's needs",
       "Service frequency up to 7 days per week",
