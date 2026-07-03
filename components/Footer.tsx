@@ -105,7 +105,12 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-site flex flex-col items-center gap-4 py-8 sm:flex-row sm:gap-6">
           <h3 className="text-sm font-bold uppercase tracking-wider text-white/90">Related Parties</h3>
-          <div className="flex items-center gap-3">
+          <a
+            href="https://www.allbuildingservices.com.au"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3"
+          >
             <Image
               src="/images/all-building-property-services-logo.jpg"
               alt="ALL Building and Property Services logo"
@@ -113,8 +118,10 @@ export default function Footer() {
               height={56}
               className="h-14 w-14 rounded-lg bg-white object-contain p-1"
             />
-            <span className="text-sm font-semibold text-white/80">ALL Building and Property Services</span>
-          </div>
+            <span className="text-sm font-semibold text-white/80 transition group-hover:text-brand">
+              ALL Building and Property Services
+            </span>
+          </a>
         </div>
       </div>
 
