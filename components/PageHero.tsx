@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Hero3DLite from "@/components/Hero3DLite";
+import Scene3D from "@/components/Scene3D";
 
 export default function PageHero({
   title,
@@ -30,7 +30,7 @@ export default function PageHero({
       )}
       {/* live 3D motion backdrop — premium, varies per page */}
       <div className="absolute inset-0">
-        <Hero3DLite variant={variant ?? title} />
+        <Scene3D kind="lite" variant={variant ?? title} />
       </div>
       {/* animated brand aurora layered over the 3D for added depth */}
       <div className="aurora pointer-events-none absolute inset-0 opacity-60" />

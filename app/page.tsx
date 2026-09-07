@@ -4,8 +4,7 @@ import type { Metadata } from "next";
 import { services, whyChoose, testimonial, site } from "@/data/site";
 import Cta from "@/components/Cta";
 import HomePopup from "@/components/HomePopup";
-import Hero3D from "@/components/Hero3D";
-import Tower3D from "@/components/Tower3D";
+import Scene3D from "@/components/Scene3D";
 import Reveal from "@/components/Reveal";
 import Stat from "@/components/Stat";
 
@@ -79,7 +78,7 @@ export default function HomePage() {
       {/* Hero with live 3D motion backdrop */}
       <section className="relative overflow-hidden bg-ink grain">
         <div className="absolute inset-0">
-          <Hero3D />
+          <Scene3D kind="hero" />
         </div>
         {/* legibility + depth overlays */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
@@ -168,7 +167,7 @@ export default function HomePage() {
       {/* About + 3D motion showcase — combined premium centrepiece */}
       <section className="relative overflow-hidden bg-ink grain">
         <div className="absolute inset-0">
-          <Tower3D />
+          <Scene3D kind="tower" />
         </div>
         {/* depth + legibility overlays over the live 3D */}
         <div className="aurora pointer-events-none absolute inset-0 opacity-50" />
