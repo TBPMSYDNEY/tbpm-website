@@ -92,10 +92,7 @@ export default function HomePage() {
             </span>
             Total Building &amp; Property Management
           </span>
-          <h1
-            className="max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white animate-fade-up sm:text-6xl"
-            style={{ animationDelay: "80ms" }}
-          >
+          <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white animate-rise sm:text-6xl">
             Managed with Care.
             <br />
             <span className="text-gradient-brand">Maintained with Pride.</span>

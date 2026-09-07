@@ -180,6 +180,17 @@
     to { opacity: 1; transform: none; }
   }
 
+  /* Transform-only entrance for LCP-critical text: the element stays fully
+     opaque so it paints on the first frame (never delaying Largest Contentful
+     Paint) while still rising gently into place. */
+  .animate-rise {
+    animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes rise {
+    from { transform: translateY(20px); }
+    to { transform: none; }
+  }
+
   .animate-shimmer {
     background-size: 200% 100%;
     animation: shimmer 2.4s linear infinite;
@@ -224,6 +235,7 @@
   .aurora,
   .animate-float,
   .animate-fade-up,
+  .animate-rise,
   .animate-shimmer,
   .animate-gradient-pan,
   .animate-spin-slow,
