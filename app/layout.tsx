@@ -63,10 +63,6 @@ export const metadata: Metadata = {
   },
   description:
     "Sydney's trusted partner for building management, cleaning, gardening, concierge and project management — protecting your property assets and residents.",
-  icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
-  },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },

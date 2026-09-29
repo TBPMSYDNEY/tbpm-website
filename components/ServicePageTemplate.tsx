@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { ServicePage } from "@/data/site";
 import { services } from "@/data/site";
+import { guides, guideHref } from "@/data/guides";
 import PageHero from "@/components/PageHero";
 import Cta from "@/components/Cta";
 import Reveal from "@/components/Reveal";
@@ -25,6 +26,7 @@ function Check() {
 
 export default function ServicePageTemplate({ service }: { service: ServicePage }) {
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const relatedGuides = guides.filter((g) => g.services.includes(service.slug));
 
   return (
     <>
@@ -173,6 +175,30 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
           </div>
         </div>
       </section>
+
+      {/* Related guides */}
+      {relatedGuides.length > 0 && (
+        <section className="bg-surface-mid py-16 sm:py-20">
+          <div className="container-site">
+            <span className="section-label">Knowledge Hub</span>
+            <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+              Guides for committees
+            </h2>
+            <ul className="mt-8 grid gap-4 md:grid-cols-2">
+              {relatedGuides.map((g) => (
+                <li key={g.slug}>
+                  <Link href={guideHref(g.slug)} className="card-premium group block h-full p-6">
+                    <span className="font-bold transition group-hover:text-brand">{g.title}</span>
+                    <span className="mt-2 block text-sm font-semibold text-brand-text">
+                      Read the guide →
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Related services */}
       <section className="bg-surface-sand py-16 sm:py-20">

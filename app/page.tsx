@@ -93,12 +93,13 @@ export default function HomePage() {
             Total Building &amp; Property Management
           </span>
           <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white animate-rise sm:text-6xl">
-            Managed with Care.
-            <br />
-            <span className="text-gradient-brand">Maintained with Pride.</span>
+            Sydney Building Management for Strata Properties
           </h1>
+          <p className="mt-5 font-display text-2xl font-semibold tracking-tight text-white/90 animate-rise sm:text-3xl">
+            Managed with Care. <span className="text-gradient-brand">Maintained with Pride.</span>
+          </p>
           <p
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 animate-fade-up"
+            className="mt-5 max-w-2xl text-lg leading-relaxed text-white/75 animate-fade-up"
             style={{ animationDelay: "160ms" }}
           >
             {site.tagline}
@@ -154,10 +155,10 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-surface-sand">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
         <div className="container-site relative grid grid-cols-2 gap-8 py-14 lg:grid-cols-4">
-          <Stat value={30} suffix="+" label="Years combined experience" />
-          <Stat staticValue="24/7" label="Emergency response" />
-          <Stat value={6} label="Specialist service lines" />
-          <Stat value={100} suffix="%" label="Insured & vetted staff" />
+          <Stat value="30+" label="Years combined experience" />
+          <Stat value="24/7" label="Emergency response" />
+          <Stat value="6" label="Specialist service lines" />
+          <Stat value="100%" label="Insured & vetted staff" />
         </div>
       </section>
 

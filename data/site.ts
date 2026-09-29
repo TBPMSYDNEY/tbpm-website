@@ -1,3 +1,5 @@
+import type { AccordionItem } from "@/components/Accordion";
+
 export const site = {
   name: "TBPM",
   legalName: "Total Building & Property Management Pty Ltd",
@@ -538,7 +540,7 @@ export const whyChoose = [
   },
 ];
 
-export const knowledgeItems = [
+export const knowledgeItems: AccordionItem[] = [
   {
     title: "How Strata Works in NSW",
     body: "Strata buildings are managed by the Owners Corporation — every lot owner collectively, usually acting through an elected Strata Committee. The Owners Corporation is responsible for maintaining common property, managing the scheme's finances, holding the required insurances and complying with the Strata Schemes Management Act 2015. Reforms taking effect on 1 April 2026 strengthen obligations around repairs and long-term maintenance planning.",
@@ -618,6 +620,10 @@ export const knowledgeItems = [
   {
     title: "Building Manager vs Strata Manager — What's the Difference?",
     body: "Well-run buildings usually have both. A strata manager (licensed in NSW) handles administration and governance — issuing levies, arranging insurance, organising meetings, keeping records and ensuring compliance — typically from an office while managing multiple schemes. A building manager (caretaker / facilities manager) looks after the physical building — an on-site presence coordinating contractors, monitoring common areas, organising maintenance and dealing with residents. In short, the strata manager handles the paperwork and finances; the building manager looks after the infrastructure and the people.",
+    guide: {
+      label: "Read the full guide: Building manager vs strata manager in NSW",
+      href: "/knowledge/building-manager-vs-strata-manager-nsw",
+    },
     links: [
       { label: "Strata roles & responsibilities (NSW)", href: "https://www.nsw.gov.au/housing-and-construction/strata/roles" },
     ],

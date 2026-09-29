@@ -1,9 +1,11 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Accordion from "@/components/Accordion";
 import Cta from "@/components/Cta";
 import JsonLd from "@/components/JsonLd";
 import { knowledgeItems } from "@/data/site";
+import { guides, guideHref } from "@/data/guides";
 
 export const metadata: Metadata = {
   title: "Strata Knowledge & Resources | Sydney Buildings",
@@ -47,7 +49,32 @@ export default function KnowledgePage() {
             most to strata committees and owners in NSW, alongside links to the official government
             resources where you can confirm the detail.
           </p>
-          <Accordion items={knowledgeItems} />
+          <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">In-depth guides</h2>
+          <p className="mt-3 leading-relaxed text-ink-mute">
+            Detailed guides for committees weighing up building management decisions.
+          </p>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+            {guides.map((g) => (
+              <li key={g.slug}>
+                <Link href={guideHref(g.slug)} className="card-premium group block h-full p-6">
+                  <span className="block font-bold transition group-hover:text-brand">
+                    {g.title}
+                  </span>
+                  <span className="mt-2 block text-sm leading-relaxed text-ink-mute">
+                    {g.description}
+                  </span>
+                  <span className="mt-3 inline-flex text-sm font-semibold text-brand-text">
+                    Read the guide →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <h2 className="mb-6 mt-16 text-2xl font-extrabold tracking-tight sm:text-3xl">
+            Quick answers
+          </h2>
+          <Accordion items={knowledgeItems} name="knowledge" />
           <p className="mt-8 text-sm leading-relaxed text-ink-mute">
             This information is general in nature and is intended to help you ask better questions
             and understand your building's responsibilities — it is not legal advice. For specific

@@ -101,6 +101,62 @@
   .glass-panel {
     @apply rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md;
   }
+  /* Long-form article typography for Knowledge Hub guides */
+  .guide-prose {
+    @apply text-lg leading-relaxed text-ink-soft;
+  }
+  .guide-prose > * + * {
+    @apply mt-5;
+  }
+  .guide-prose h2 {
+    @apply !mt-12 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl;
+  }
+  .guide-prose h3 {
+    @apply !mt-8 text-xl font-bold text-ink;
+  }
+  .guide-prose ul,
+  .guide-prose ol {
+    @apply space-y-2 pl-6;
+  }
+  .guide-prose ul {
+    @apply list-disc;
+  }
+  .guide-prose ol {
+    @apply list-decimal;
+  }
+  .guide-prose li::marker {
+    @apply text-brand;
+  }
+  .guide-prose a {
+    @apply font-semibold text-brand-text underline decoration-brand/40 underline-offset-2 hover:decoration-brand;
+  }
+  .guide-prose strong {
+    @apply font-bold text-ink;
+  }
+  .guide-prose .table-wrap {
+    @apply overflow-x-auto rounded-2xl border border-ink/10 bg-white;
+  }
+  .guide-prose table {
+    @apply w-full min-w-[36rem] text-left text-base;
+  }
+  .guide-prose th {
+    @apply bg-surface-sage px-4 py-3 font-bold text-ink;
+  }
+  .guide-prose td {
+    @apply border-t border-ink/10 px-4 py-3 align-top;
+  }
+  .guide-example {
+    @apply rounded-2xl border-l-4 border-brand bg-surface-sage p-6 text-base;
+  }
+  .guide-example > * + * {
+    @apply mt-3;
+  }
+  .guide-example-label {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-brand-text;
+  }
+  .guide-example-title {
+    @apply !mt-1 font-bold text-ink;
+  }
   .text-gradient-brand {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(

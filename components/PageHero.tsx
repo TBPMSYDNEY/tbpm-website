@@ -48,10 +48,8 @@ export default function PageHero({
             {eyebrow}
           </span>
         )}
-        <h1
-          className="max-w-3xl text-4xl font-extrabold tracking-tight text-white animate-fade-up sm:text-5xl"
-          style={{ animationDelay: "80ms" }}
-        >
+        {/* LCP element: transform-only entrance so it paints opaque on the first frame */}
+        <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-white animate-rise sm:text-5xl">
           {title}
         </h1>
         {subtitle && (
