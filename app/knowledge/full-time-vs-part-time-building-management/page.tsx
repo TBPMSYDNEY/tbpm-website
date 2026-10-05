@@ -177,7 +177,7 @@ export default function Page() {
       <p>
         See how each model works at TBPM:{" "}
         <Link href="/on-site-building-management">full-time on-site building management</Link> or{" "}
-        <Link href="/remote-building-management">part-time and hybrid building management</Link>.
+        <Link href="/part-time-building-management">part-time and hybrid building management</Link>.
         If you’re unsure which your building needs,{" "}
         <Link href="/contact">book a free site assessment</Link> — we’ll walk the building with
         your committee and recommend a level of cover based on what we find.

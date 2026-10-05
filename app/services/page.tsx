@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const blurbs: Record<string, string> = {
   "on-site-building-management":
     "Your building deserves a dedicated professional on the ground. TBPM places an experienced Building Manager at your property, responsible for the efficient day-to-day operation of your building and the satisfaction of its residents.",
-  "remote-building-management":
+  "part-time-building-management":
     "Not every building requires a full-time on-site presence. Our part-time and hybrid service provides the same professional oversight, compliance management and contractor coordination — delivered through a structured model with scheduled site visits.",
   "concierge-services":
     "First impressions matter. TBPM's concierge teams provide a professional, welcoming presence in your building's lobby, enhancing the daily experience for residents, visitors and tenants alike.",
@@ -50,7 +50,7 @@ export default function ServicesPage() {
               <div className={`relative aspect-[16/10] ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                 <Image
                   src={s.cardImage}
-                  alt={s.navLabel}
+                  alt=""
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 36rem, 100vw"

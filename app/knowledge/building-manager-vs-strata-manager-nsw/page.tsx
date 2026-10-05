@@ -175,7 +175,7 @@ export default function Page() {
         For larger buildings that means a{" "}
         <Link href="/on-site-building-management">full-time on-site building manager</Link>; for
         mid-sized schemes, a{" "}
-        <Link href="/remote-building-management">part-time or hybrid roster</Link>. If you’d like
+        <Link href="/part-time-building-management">part-time or hybrid roster</Link>. If you’d like
         to talk through which fits, <Link href="/contact">request a free site assessment</Link>.
       </p>
 

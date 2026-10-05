@@ -30,7 +30,7 @@ export const nav = [
     href: "/services",
     children: [
       { label: "Full-Time On-Site Building Management", href: "/on-site-building-management" },
-      { label: "Part-Time / Hybrid Building Management", href: "/remote-building-management" },
+      { label: "Part-Time / Hybrid Building Management", href: "/part-time-building-management" },
       { label: "Cleaning Services", href: "/cleaning-services" },
       { label: "Gardening Services", href: "/gardening-services" },
       { label: "Concierge Services", href: "/concierge-services" },
@@ -48,7 +48,9 @@ export type ServicePage = {
   metaDescription: string;
   heroImage: string;
   cardImage: string;
-  gallery?: string[];
+  /** Describes the line icon itself; cards beside the service name use alt="". */
+  cardImageAlt: string;
+  gallery?: { src: string; alt: string }[];
   icon: string;
   title: string;
   intro: string[];
@@ -68,7 +70,12 @@ export const services: ServicePage[] = [
       "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with 24/7 emergency support, contractor coordination and compliance reporting.",
     heroImage: "/images/tbpm-building-manager-hero.jpg",
     cardImage: "/images/tbpm-icon-full-time-on-site.png",
-    gallery: ["/images/9.png", "/images/8.png", "/images/7.png"],
+    cardImageAlt: "Line icon of a building manager standing beside an apartment building",
+    gallery: [
+      { src: "/images/9.png", alt: "Stacked Australian banknotes under a falling red arrow, representing cost savings" },
+      { src: "/images/8.png", alt: "Handyman's tool belt with screwdrivers, pliers and a tape measure" },
+      { src: "/images/7.png", alt: "Laptop showing a digital building register over an apartment block" },
+    ],
     icon: "/images/tbpm-icon-full-time-on-site-white-2.png",
     title: "Full-Time On-Site Building Management",
     intro: [
@@ -148,14 +155,19 @@ export const services: ServicePage[] = [
     ],
   },
   {
-    slug: "remote-building-management",
+    slug: "part-time-building-management",
     navLabel: "Part-Time / Hybrid Building Management",
     metaTitle: "Part-Time & Hybrid Building Management Sydney",
     metaDescription:
       "Structured part-time and hybrid building management for 30–100 lot Sydney strata schemes — weekly rosters of 8–20 hours backed by remote office support.",
     heroImage: "/images/46993211_l-1-scaled-1.jpg",
     cardImage: "/images/tbpm-icon-part-time-hybrid.png",
-    gallery: ["/images/9.png", "/images/tbpm-building-asset.jpg", "/images/7.png"],
+    cardImageAlt: "Line icon of an apartment building with a clock",
+    gallery: [
+      { src: "/images/9.png", alt: "Stacked Australian banknotes under a falling red arrow, representing cost savings" },
+      { src: "/images/tbpm-building-asset.jpg", alt: "Building asset management life cycle: condition surveys, recommendations, construction administration, observation and testing, ongoing administration" },
+      { src: "/images/7.png", alt: "Laptop showing a digital building register over an apartment block" },
+    ],
     icon: "/images/tbpm-icon-part-time-hybrid-white-2.png",
     title: "Part-Time & Hybrid Building Management",
     intro: [
@@ -236,7 +248,12 @@ export const services: ServicePage[] = [
       "Structured strata cleaning programs for Sydney buildings — common areas, waste rooms, fire stairs and car parks, up to 7 days per week with vetted staff.",
     heroImage: "/images/shutterstock_2453839265-1.jpg",
     cardImage: "/images/tbpm-line-cleaning.png",
-    gallery: ["/images/tbpm-cleaning-1.jpg", "/images/tbpm-cleaning-2.jpg", "/images/tbpm-cleaning-3.jpg"],
+    cardImageAlt: "Line icon of a cleaning spray bottle",
+    gallery: [
+      { src: "/images/tbpm-cleaning-1.jpg", alt: "Uniformed cleaning team with mops, a cleaning trolley and a wet-floor sign" },
+      { src: "/images/tbpm-cleaning-2.jpg", alt: "Cleaner pressure-washing a paved building entrance with a surface cleaner" },
+      { src: "/images/tbpm-cleaning-3.jpg", alt: "Gloved hand wiping lift call buttons with a cloth and spray" },
+    ],
     icon: "/images/tbpm-line-cleaning-2.png",
     title: "Strata Cleaning Services for Sydney Buildings",
     intro: [
@@ -307,7 +324,11 @@ export const services: ServicePage[] = [
       "Professional garden and landscape maintenance for Sydney strata buildings — lawns, hedging, irrigation, pest control and horticultural advice.",
     heroImage: "/images/unnamed.jpg",
     cardImage: "/images/tbpm-line-gardening.png",
-    gallery: ["/images/tbpm-gardening-1.png", "/images/tbpm-gardening-2.png"],
+    cardImageAlt: "Line icon of a seedling in a pot",
+    gallery: [
+      { src: "/images/tbpm-gardening-1.png", alt: "Landscaped courtyard garden with trees and planting between apartment buildings" },
+      { src: "/images/tbpm-gardening-2.png", alt: "Rooftop garden terrace with raised planter beds and paved paths" },
+    ],
     icon: "/images/tbpm-line-gardening-2.png",
     title: "Strata Gardening & Landscape Maintenance in Sydney",
     intro: [
@@ -371,7 +392,12 @@ export const services: ServicePage[] = [
       "Professional concierge services for Sydney residential and mixed-use buildings — front-of-house presence, parcel management, visitor coordination and amenity bookings.",
     heroImage: "/images/hotel-concierge.jpg",
     cardImage: "/images/tbpm-icon-concierge.png",
-    gallery: ["/images/9.png", "/images/building-asset-lifecycle.jpg", "/images/7.png"],
+    cardImageAlt: "Line icon of a concierge service bell",
+    gallery: [
+      { src: "/images/9.png", alt: "Stacked Australian banknotes under a falling red arrow, representing cost savings" },
+      { src: "/images/building-asset-lifecycle.jpg", alt: "Building asset management life cycle: condition surveys, recommendations, construction administration, observation and testing, ongoing administration" },
+      { src: "/images/7.png", alt: "Laptop showing a digital building register over an apartment block" },
+    ],
     icon: "/images/tbpm-icon-concierge-white-2.png",
     title: "Concierge Services for Sydney Residential & Mixed-Use Buildings",
     intro: [
@@ -449,7 +475,11 @@ export const services: ServicePage[] = [
       "Strata project management for Sydney buildings — defect rectification, capital works and common-area upgrades managed by construction-experienced teams.",
     heroImage: "/images/construction-project-management-guide-768x432-1.jpg",
     cardImage: "/images/tbpm-line-project-management.png",
-    gallery: ["/images/tbpm-project-management-1.jpg", "/images/tbpm-project-management-2.png"],
+    cardImageAlt: "Line icon of a clipboard checklist",
+    gallery: [
+      { src: "/images/tbpm-project-management-1.jpg", alt: "Exposed reinforcing steel in a concrete slab during spalling repairs" },
+      { src: "/images/tbpm-project-management-2.png", alt: "Scaffold and project signage on an apartment façade during remedial works" },
+    ],
     icon: "/images/tbpm-line-project-management-2.png",
     title: "Strata Project Management & Defect Works in Sydney",
     intro: [

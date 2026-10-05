@@ -43,7 +43,7 @@ export const guides: Guide[] = [
     published: "2026-09-29",
     reviewed: "2026-09-29",
     readingMinutes: 7,
-    services: ["on-site-building-management", "remote-building-management"],
+    services: ["on-site-building-management", "part-time-building-management"],
   },
   {
     slug: "full-time-vs-part-time-building-management",
@@ -55,7 +55,7 @@ export const guides: Guide[] = [
     published: "2026-09-29",
     reviewed: "2026-09-29",
     readingMinutes: 8,
-    services: ["on-site-building-management", "remote-building-management"],
+    services: ["on-site-building-management", "part-time-building-management"],
   },
   {
     slug: "building-management-costs-sydney",
@@ -67,7 +67,7 @@ export const guides: Guide[] = [
     published: "2026-09-29",
     reviewed: "2026-09-29",
     readingMinutes: 8,
-    services: ["on-site-building-management", "remote-building-management"],
+    services: ["on-site-building-management", "part-time-building-management"],
   },
   {
     slug: "changing-building-management-provider",
@@ -79,7 +79,7 @@ export const guides: Guide[] = [
     published: "2026-09-29",
     reviewed: "2026-09-29",
     readingMinutes: 8,
-    services: ["on-site-building-management", "remote-building-management"],
+    services: ["on-site-building-management", "part-time-building-management"],
   },
 ];
 

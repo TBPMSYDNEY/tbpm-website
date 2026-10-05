@@ -166,7 +166,7 @@ export default function Page() {
         writing. <Link href="/contact">Request your free site assessment and proposal</Link>, or
         read more about{" "}
         <Link href="/on-site-building-management">full-time on-site management</Link> and{" "}
-        <Link href="/remote-building-management">part-time and hybrid management</Link>.
+        <Link href="/part-time-building-management">part-time and hybrid management</Link>.
       </p>
     </GuideLayout>
   );

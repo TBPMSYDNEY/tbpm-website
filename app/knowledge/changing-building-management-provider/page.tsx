@@ -147,7 +147,7 @@ export default function Page() {
       <p>
         Read more about{" "}
         <Link href="/on-site-building-management">full-time on-site building management</Link> or{" "}
-        <Link href="/remote-building-management">part-time and hybrid building management</Link>,
+        <Link href="/part-time-building-management">part-time and hybrid building management</Link>,
         or <Link href="/contact">request a free site assessment</Link> to start the conversation.
       </p>
     </GuideLayout>

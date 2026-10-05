@@ -6,7 +6,7 @@ const base = "https://tbpm.com.au";
 
 // Bump when page content materially changes so crawlers can prioritise
 // genuinely updated pages instead of seeing every URL as freshly modified.
-const lastModified = new Date("2026-09-29");
+const lastModified = new Date("2026-10-06");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = ["", "/about-us", "/services", "/knowledge", "/contact"];

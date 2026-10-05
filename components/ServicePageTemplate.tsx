@@ -56,7 +56,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
           >
             <Image
               src={service.cardImage}
-              alt={service.title}
+              alt={service.cardImageAlt}
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 36rem, 100vw"
@@ -91,14 +91,14 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
           <div className="container-site grid grid-cols-2 gap-4 md:grid-cols-3">
             {service.gallery.map((img, i) => (
               <div
-                key={img}
+                key={img.src}
                 className={`relative aspect-[3/2] overflow-hidden rounded-2xl ${
                   i === 0 && service.gallery!.length === 2 ? "md:col-span-2" : ""
                 }`}
               >
                 <Image
-                  src={img}
-                  alt={`${service.title} — TBPM`}
+                  src={img.src}
+                  alt={img.alt}
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 24rem, 50vw"
@@ -216,7 +216,7 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
                       src={s.cardImage}
-                      alt={s.navLabel}
+                      alt=""
                       fill
                       className="object-cover transition duration-500 group-hover:scale-105"
                       sizes="(min-width: 768px) 24rem, 100vw"

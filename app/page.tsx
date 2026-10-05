@@ -22,7 +22,7 @@ const serviceTeasers: Record<string, { blurb: string; fit?: string }> = {
     blurb: "A dedicated manager on-site 5 days a week, with 24/7 emergency support.",
     fit: "Typical fit: 100+ lot residential and mixed-use buildings",
   },
-  "remote-building-management": {
+  "part-time-building-management": {
     blurb: "A structured weekly roster (8–20 hours) with remote office backup.",
     fit: "Typical fit: 30–100 lot buildings with active committees",
   },
@@ -250,7 +250,7 @@ export default function HomePage() {
                     <div className="relative aspect-[16/9] overflow-hidden bg-white">
                       <Image
                         src={s.cardImage}
-                        alt={s.navLabel}
+                        alt=""
                         fill
                         className="object-contain p-6 transition duration-500 group-hover:scale-105"
                         sizes="(min-width: 1024px) 24rem, (min-width: 768px) 50vw, 100vw"
