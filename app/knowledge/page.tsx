@@ -6,14 +6,19 @@ import Cta from "@/components/Cta";
 import JsonLd from "@/components/JsonLd";
 import { knowledgeItems } from "@/data/site";
 import { guides, guideHref } from "@/data/guides";
+import { pageOpenGraph } from "@/data/seo";
+
+const title = "Strata Knowledge & Resources | Sydney Buildings";
+const description =
+  "Plain-English guides to strata living in NSW — Owners Corporations, levies, fire safety, building defects, WHS, by-laws and the difference between building and strata managers.";
 
 export const metadata: Metadata = {
-  title: "Strata Knowledge & Resources | Sydney Buildings",
-  description:
-    "Plain-English guides to strata living in NSW — Owners Corporations, levies, fire safety, building defects, WHS, by-laws and the difference between building and strata managers.",
+  title,
+  description,
   alternates: {
     canonical: "/knowledge",
   },
+  openGraph: pageOpenGraph({ path: "/knowledge", title, description }),
 };
 
 const faqSchema = {

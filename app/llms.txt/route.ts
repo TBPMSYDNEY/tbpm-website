@@ -33,6 +33,7 @@ ${guides.map((g) => `- [${g.title}](${base}${guideHref(g.slug)}): ${g.descriptio
 - [About TBPM](${base}/about-us): Company background and founders.
 - [All services](${base}/services): Overview of every TBPM service.
 - [Contact and proposal requests](${base}/contact): Request a free site assessment and proposal.
+- [Privacy Policy](${base}/privacy): How enquiry and website usage information is collected and handled.
 - [Capability Statement 2026 (PDF)](${base}/docs/TBPM-Capability-Statement-2026.pdf): Company capability statement.
 `;
 

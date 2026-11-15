@@ -3,14 +3,19 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Cta from "@/components/Cta";
+import { pageOpenGraph } from "@/data/seo";
+
+const title = "About TBPM | Sydney Strata Building Management Specialists";
+const description =
+  "TBPM combines professional building management with real construction expertise. Founded by two directors with 30+ years combined experience across Sydney strata buildings.";
 
 export const metadata: Metadata = {
-  title: "About TBPM | Sydney Strata Building Management Specialists",
-  description:
-    "TBPM combines professional building management with real construction expertise. Founded by two directors with 30+ years combined experience across Sydney strata buildings.",
+  title,
+  description,
   alternates: {
     canonical: "/about-us",
   },
+  openGraph: pageOpenGraph({ path: "/about-us", title, description }),
 };
 
 export default function AboutPage() {
@@ -129,8 +134,51 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Related-party disclosure */}
+      <section id="related-parties" className="scroll-mt-24 py-16 sm:py-20">
+        <div className="container-site max-w-3xl">
+          <span className="section-label">Transparency</span>
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Related parties and contractor quotes
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-ink-mute">
+            <a
+              href="https://www.allbuildingservices.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-brand-text underline"
+            >
+              ALL Building and Property Services
+            </a>{" "}
+            is a related party of TBPM. Because we also help Owners Corporations source and compare
+            contractor quotes, we want committees to know exactly how that relationship is handled.
+          </p>
+          <ul className="mt-6 space-y-4 text-ink-mute">
+            <li>
+              <strong className="text-ink">Disclosure first.</strong> If a related party is invited
+              to quote on work at a building we manage, we tell the committee about the
+              relationship in writing before the quote is considered.
+            </li>
+            <li>
+              <strong className="text-ink">Compared like for like.</strong> A related-party quote
+              is presented alongside quotes from independent contractors against the same scope,
+              so the committee can compare price and inclusions directly.
+            </li>
+            <li>
+              <strong className="text-ink">The committee decides.</strong> The Owners Corporation
+              or its Strata Committee chooses the contractor and approves the spend. TBPM does not
+              award work to a related party on a building&rsquo;s behalf.
+            </li>
+            <li>
+              <strong className="text-ink">You can say no.</strong> A committee can ask us not to
+              seek related-party quotes at all, and we will source independent contractors only.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* Stats / commitment */}
-      <section className="py-16 sm:py-24">
+      <section className="bg-surface-mid py-16 sm:py-24">
         <div className="container-site grid gap-10 text-center sm:grid-cols-3">
           <div>
             <p className="text-5xl font-extrabold text-brand">30+</p>
@@ -141,7 +189,7 @@ export default function AboutPage() {
           <div>
             <p className="text-5xl font-extrabold text-brand">24/7</p>
             <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-ink-mute">
-              Emergency support
+              After-hours emergency phone line
             </p>
           </div>
           <div>

@@ -8,6 +8,7 @@ const quickLinks = [
   { label: "Our Services", href: "/services" },
   { label: "Knowledge", href: "/knowledge" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 export default function Footer() {
@@ -104,7 +105,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-site flex flex-col items-center gap-4 py-8 sm:flex-row sm:gap-6">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-white/90">Related Parties</h3>
+          <h3 className="flex-none text-sm font-bold uppercase tracking-wider text-white/90">Related Parties</h3>
           <a
             href="https://www.allbuildingservices.com.au"
             target="_blank"
@@ -122,6 +123,13 @@ export default function Footer() {
               ALL Building and Property Services
             </span>
           </a>
+          <p className="max-w-xl text-center text-xs leading-relaxed text-white/60 sm:text-left">
+            A related party of TBPM. If it quotes on work at a building we manage, we disclose the
+            relationship to the committee, and the committee decides who is engaged.{" "}
+            <Link href="/about-us#related-parties" className="font-semibold text-white/80 underline transition hover:text-brand">
+              How we handle related-party quotes
+            </Link>
+          </p>
         </div>
       </div>
 
@@ -130,7 +138,12 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {site.legalName} · All rights reserved
           </p>
-          <p>Sydney, NSW, Australia</p>
+          <p>
+            <Link href="/privacy" className="underline transition hover:text-brand">
+              Privacy Policy
+            </Link>{" "}
+            · Sydney, NSW, Australia
+          </p>
         </div>
       </div>
     </footer>

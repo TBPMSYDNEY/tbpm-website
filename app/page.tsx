@@ -3,7 +3,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { services, whyChoose, testimonial, site } from "@/data/site";
 import Cta from "@/components/Cta";
-import HomePopup from "@/components/HomePopup";
 import Scene3D from "@/components/Scene3D";
 import Reveal from "@/components/Reveal";
 import Stat from "@/components/Stat";
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 
 const serviceTeasers: Record<string, { blurb: string; fit?: string }> = {
   "on-site-building-management": {
-    blurb: "A dedicated manager on-site 5 days a week, with 24/7 emergency support.",
+    blurb: "A dedicated manager on-site 5 days a week, with an after-hours emergency phone line.",
     fit: "Typical fit: 100+ lot residential and mixed-use buildings",
   },
   "part-time-building-management": {
@@ -64,6 +63,15 @@ const valueProps = [
   },
 ];
 
+// Example rows only — shows the report format, not a real building's records.
+const sampleReport = [
+  { item: "Basement pump — fault alarm", status: "Closed", next: "Contractor attended; pump tested and reset" },
+  { item: "Level 3 corridor — ceiling water stain", status: "Open", next: "Plumber inspection booked; quote to follow" },
+  { item: "Annual fire safety statement", status: "On track", next: "Practitioner assessment scheduled before due date" },
+  { item: "Garage door — quarterly service", status: "Completed", next: "Next service due in three months" },
+  { item: "Balcony waterproofing — two quotes received", status: "Committee decision", next: "Compare quotes at next meeting" },
+];
+
 const trustPills = [
   "30+ years combined experience",
   "Fully insured & vetted",
@@ -73,8 +81,6 @@ const trustPills = [
 export default function HomePage() {
   return (
     <>
-      <HomePopup />
-
       {/* Hero with live 3D motion backdrop */}
       <section className="relative overflow-hidden bg-ink grain">
         <div className="absolute inset-0">
@@ -155,10 +161,10 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-surface-sand">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
         <div className="container-site relative grid grid-cols-2 gap-8 py-14 lg:grid-cols-4">
-          <Stat value="30+" label="Years combined experience" />
-          <Stat value="24/7" label="Emergency response" />
-          <Stat value="6" label="Specialist service lines" />
-          <Stat value="100%" label="Insured & vetted staff" />
+          <Stat value="6" label="Service lines under one provider" />
+          <Stat value="5 days" label="On-site each week with full-time management" />
+          <Stat value="8–20 hrs" label="Weekly rosters for part-time management" />
+          <Stat value="24/7" label="After-hours emergency phone line" />
         </div>
       </section>
 
@@ -200,28 +206,6 @@ export default function HomePage() {
               contractors are quoted against what work should actually cost, and your building&rsquo;s
               value is protected for the long term.
             </p>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
-              {trustPills.map((p) => (
-                <span
-                  key={p}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-white/70"
-                >
-                  <svg
-                    className="h-4 w-4 text-brand"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4l3.3 3.29 6.8-6.8a1 1 0 011.4 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  {p}
-                </span>
-              ))}
-            </div>
             <Link href="/about-us" className="btn-primary mt-9 w-fit">
               The TBPM Difference
             </Link>
@@ -308,6 +292,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sample monthly report */}
+      <section className="bg-surface-mid py-16 sm:py-24">
+        <div className="container-site grid items-start gap-12 lg:grid-cols-[1fr_1.25fr]">
+          <Reveal>
+            <span className="section-label">Reporting</span>
+            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              What your committee sees each month.
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink-mute">
+              Every managed building gets a monthly report: what was done, what is still open, who
+              is responsible and what needs a committee decision. This extract shows the format.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-ink-mute">
+              Illustrative sample only — the entries are examples, not records from a real
+              building.
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <figure className="overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-sm">
+              <figcaption className="flex flex-wrap items-center justify-between gap-2 border-b border-ink/10 px-6 py-4">
+                <span className="font-bold">Monthly Building Report — sample extract</span>
+                <span className="rounded-full bg-brand-light px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-text">
+                  Illustrative
+                </span>
+              </figcaption>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[34rem] text-left text-sm">
+                  <thead className="bg-surface-mid text-xs uppercase tracking-wide text-ink-mute">
+                    <tr>
+                      <th scope="col" className="px-6 py-3 font-bold">Item</th>
+                      <th scope="col" className="px-4 py-3 font-bold">Status</th>
+                      <th scope="col" className="px-4 py-3 font-bold">Next step</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-ink/10 text-ink-soft">
+                    {sampleReport.map((r) => (
+                      <tr key={r.item}>
+                        <th scope="row" className="px-6 py-3.5 font-semibold text-ink">{r.item}</th>
+                        <td className="px-4 py-3.5">{r.status}</td>
+                        <td className="px-4 py-3.5">{r.next}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Testimonial */}
       <section className="bg-surface-sage py-16 sm:py-20">
         <Reveal className="container-site max-w-3xl text-center">
@@ -325,7 +359,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-24">
         <div className="container-site">
           <Reveal className="max-w-2xl">
-            <span className="section-label">Included with management engagements</span>
+            <span className="section-label">Included with new engagements</span>
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
               Make your management fee pay for itself.
             </h2>
@@ -351,6 +385,17 @@ export default function HomePage() {
                 <p className="mt-2 text-sm leading-relaxed text-ink-mute">{v.description}</p>
               </Reveal>
             ))}
+          </div>
+          <div className="mt-10 flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:justify-between">
+            <p className="max-w-3xl text-xs leading-relaxed text-ink-mute">
+              Offers apply to new management or cleaning agreements only. Handyman and deep
+              cleaning hours are redeemable within the first 90 days of engagement; materials and
+              specialist consumables are excluded. Website hosting and maintenance are included
+              for the term of the agreement.
+            </p>
+            <Link href="/contact" className="btn-primary flex-none">
+              Ask About These Inclusions
+            </Link>
           </div>
         </div>
       </section>

@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
-import { site } from "@/data/site";
+import { site, afterHours } from "@/data/site";
+import { pageOpenGraph } from "@/data/seo";
+
+const title = "Contact TBPM | Request a Site Assessment";
+const description =
+  "Tell us about your building. We'll reply within one business day to arrange a complimentary site assessment, with a tailored proposal to follow — or call (02) 7240 1700.";
 
 export const metadata: Metadata = {
-  title: "Contact TBPM | Request a Proposal",
-  description:
-    "Tell us about your building. We'll respond within one business day with a tailored proposal — or call (02) 7240 1700 if it's urgent.",
+  title,
+  description,
   alternates: {
     canonical: "/contact",
   },
+  openGraph: pageOpenGraph({ path: "/contact", title, description }),
 };
 
 export default function ContactPage() {
@@ -18,7 +23,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get In Touch"
         title="Tell us about your building."
-        subtitle="We'll respond within one business day with a tailored proposal — or call the number below if it's urgent."
+        subtitle="We'll reply within one business day to arrange a complimentary site assessment. Your tailored proposal follows the assessment."
         image="/images/office-building.jpg"
         imageAlt="Sydney office and residential building exterior"
       />
@@ -26,10 +31,24 @@ export default function ContactPage() {
       <section className="py-16 sm:py-24">
         <div className="container-site grid gap-14 lg:grid-cols-[1fr_22rem]">
           <div>
-            <span className="section-label">Request a proposal</span>
+            <span className="section-label">Enquire</span>
             <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
-              Request a Proposal
+              Request a Site Assessment
             </h2>
+            <ol className="mt-5 grid gap-3 text-sm text-ink-mute sm:grid-cols-3">
+              <li className="rounded-2xl bg-surface-mid p-4">
+                <span className="block font-bold text-ink">1. We reply</span>
+                Within one business day of your enquiry.
+              </li>
+              <li className="rounded-2xl bg-surface-mid p-4">
+                <span className="block font-bold text-ink">2. We assess</span>
+                A complimentary site visit at a time that suits your committee.
+              </li>
+              <li className="rounded-2xl bg-surface-mid p-4">
+                <span className="block font-bold text-ink">3. We propose</span>
+                A tailored proposal after the assessment — timing confirmed at the visit.
+              </li>
+            </ol>
             <div className="mt-8">
               <ContactForm />
             </div>
@@ -63,10 +82,11 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-3xl bg-ink p-8 text-white">
-              <h3 className="text-lg font-extrabold">After-Hours Emergencies</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/75">
-                24/7 support for existing buildings covering water, fire, security and lift
-                entrapment issues.
+              <h3 className="text-lg font-extrabold">{afterHours.label}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/75">{afterHours.summary}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/75">{afterHours.detail}</p>
+              <p className="mt-3 text-sm font-semibold leading-relaxed text-white">
+                {afterHours.safety}
               </p>
               <a href={site.phoneHref} className="btn-primary mt-6 w-full">
                 Call {site.phone}

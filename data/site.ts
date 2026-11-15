@@ -22,6 +22,19 @@ export const site = {
   },
 };
 
+/**
+ * One definition of what "after-hours emergency support" means, reused
+ * wherever the site mentions it so the promise reads the same everywhere.
+ */
+export const afterHours = {
+  label: "After-hours emergency phone line",
+  summary:
+    "For buildings we manage, urgent calls outside office hours about water, fire systems, security and lift entrapment are answered by phone and triaged.",
+  detail:
+    "Where the issue needs someone on site, we call out the building's emergency contractors. This is phone triage and contractor dispatch — whether a contractor or a TBPM team member attends in person depends on the issue. Coverage, response arrangements and any call-out or after-hours attendance charges are set out in each building's management agreement.",
+  safety: "If life or property is at immediate risk, call 000 first.",
+};
+
 export const nav = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
@@ -67,7 +80,7 @@ export const services: ServicePage[] = [
     navLabel: "Full-Time On-Site Building Management",
     metaTitle: "On-Site Building Management Sydney",
     metaDescription:
-      "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with 24/7 emergency support, contractor coordination and compliance reporting.",
+      "Dedicated full-time on-site building managers for Sydney strata buildings — 5 days a week with an after-hours emergency phone line, contractor coordination and compliance reporting.",
     heroImage: "/images/tbpm-building-manager-hero.jpg",
     cardImage: "/images/tbpm-icon-full-time-on-site.png",
     cardImageAlt: "Line icon of a building manager standing beside an apartment building",
@@ -80,7 +93,7 @@ export const services: ServicePage[] = [
     title: "Full-Time On-Site Building Management",
     intro: [
       "Your building deserves a dedicated professional on the ground. Daily issues — leaks, lift faults, contractor no-shows, resident complaints — directly impact property value and resident satisfaction when they aren't dealt with immediately.",
-      "TBPM places an experienced Building Manager at your property five days a week, backed by office support and after-hours emergency response. Our construction background means committees get informed advice when evaluating contractor proposals and defect rectification costs — not just facilities administration.",
+      "TBPM places an experienced Building Manager at your property five days a week, backed by office support and an after-hours emergency phone line. Our construction background means committees get informed advice when evaluating contractor proposals and defect rectification costs — not just facilities administration.",
     ],
     onboarding: [
       {
@@ -101,7 +114,7 @@ export const services: ServicePage[] = [
     ],
     included: [
       "Dedicated on-site Building Manager, five days per week",
-      "After-hours emergency phone support",
+      "After-hours emergency phone line",
       "Daily common-property supervision across all building areas",
       "Single point of contact for residents, contractors and committees",
       "Regular site inspections identifying maintenance and safety issues",
@@ -198,7 +211,7 @@ export const services: ServicePage[] = [
       "Hands-on contractor supervision and coordination",
       "Compliance documentation and monthly reporting",
       "Clear resident communication pathway",
-      "After-hours emergency phone support",
+      "After-hours emergency phone line",
       "Fully remote option available for smaller schemes",
       "Quarterly committee review meetings",
     ],
@@ -488,7 +501,7 @@ export const services: ServicePage[] = [
     ],
     included: [
       "Project scoping — defining works and objectives before contractor engagement",
-      "Contractor procurement — licensed contractors and competitive quotations",
+      "Contractor procurement — licensed contractors and competitive quotations, with any related-party quote disclosed to the committee",
       "Contractor coordination — communication, site access and scheduling",
       "Site progress monitoring — quality and progress checks at key stages",
       "Defect rectification management — identification through inspection to close-out",
@@ -544,9 +557,9 @@ export const whyChoose = [
       "Founded by professionals with 30+ years combined experience in building management and construction — we understand buildings from the slab up.",
   },
   {
-    title: "24/7 Availability",
+    title: "After-Hours Emergency Phone Line",
     description:
-      "After-hours emergency phone support for water, fire, security and lift entrapment issues — every building, every night.",
+      "Urgent water, fire-system, security and lift entrapment calls are answered and triaged by phone, 24/7, with emergency contractors called out when needed. Attendance and call-out charges follow your management agreement.",
   },
   {
     title: "One Building, One Manager",
@@ -609,7 +622,7 @@ export const knowledgeItems: AccordionItem[] = [
   },
   {
     title: "Fire Safety & the Annual Fire Safety Statement (AFSS)",
-    body: "Most strata buildings must have their essential fire safety measures inspected each year by an accredited practitioner, who issues an Annual Fire Safety Statement (AFSS) that is lodged with the local council and Fire and Rescue NSW. The current fire safety schedule and statement must be displayed prominently in the building. Missing or late statements are one of the most common compliance failures in self-managed buildings.",
+    body: "Most strata buildings must give an Annual Fire Safety Statement (AFSS) each year. The roles are separate: an accredited practitioner (fire safety) assesses, inspects and verifies the performance of each essential fire safety measure and the exit systems, and the statement itself is then issued by or on behalf of the building owner — in a strata scheme, the Owners Corporation, usually signed by the strata manager or another authorised agent. The practitioner's assessment supports the statement; it does not replace the owner's declaration. The issued statement is given to the local council and Fire and Rescue NSW, and displayed prominently in the building with the current fire safety schedule. A building manager's part is coordination: booking the assessment, arranging access, tracking any repairs the practitioner requires and keeping the committee to the due date. Missing or late statements are one of the most common compliance failures in self-managed buildings.",
     links: [
       { label: "Fire safety certification (NSW Planning Portal)", href: "https://www.planning.nsw.gov.au/policy-and-legislation/buildings/fire-safety-in-buildings/fire-safety-certification" },
       { label: "Lodge a fire safety statement (Fire and Rescue NSW)", href: "https://www.fire.nsw.gov.au/fire-safety/building-fire-safety/service-type-tool/lodge-a-fire-safety-statement" },
@@ -634,9 +647,11 @@ export const knowledgeItems: AccordionItem[] = [
   },
   {
     title: "Work Health & Safety on Common Property",
-    body: "Under NSW work health and safety law, an Owners Corporation is a person conducting a business or undertaking (PCBU) and has legal duties to keep common property safe for residents, visitors and contractors. In practice that means verifying contractor licences and insurances and obtaining Safe Work Method Statements (SWMS) before any work begins on site.",
+    body: "Whether an Owners Corporation is a person conducting a business or undertaking (PCBU) under NSW work health and safety law depends on the scheme. SafeWork NSW's guidance is that a body corporate responsible for common areas used only for residential purposes is generally not a PCBU in relation to those areas. That changes if the Owners Corporation employs a worker — a caretaker or gardener on its payroll, for example — and WHS laws usually apply where common areas are also used for commercial purposes, as in mixed-use and commercial schemes. Engaging a contractor is not the same as employing a worker, and the contractor carries its own WHS duties as a PCBU. Because the answer turns on each scheme's circumstances, committees should check the SafeWork NSW guidance below or get advice rather than assume either way. Separately from WHS law, every Owners Corporation must keep common property maintained and in good repair under the Strata Schemes Management Act 2015. On Safe Work Method Statements (SWMS): the law requires one before high-risk construction work starts — for example work with a risk of a fall of more than two metres, or work that disturbs asbestos — not before every job. As a matter of TBPM's own contractor procedures, which go further than that legal minimum, we check contractor licences and insurances before work on the buildings we manage, and we sight and accept a SWMS before any high-risk construction work begins.",
     links: [
-      { label: "SafeWork NSW", href: "https://www.safework.nsw.gov.au/" },
+      { label: "SafeWork NSW — Strata title and body corporate", href: "https://www.safework.nsw.gov.au/legal-obligations/strata-title-and-body-corporate" },
+      { label: "SafeWork NSW — Preparing a safe work method statement", href: "https://www.safework.nsw.gov.au/your-industry/construction/construction/general-requirements/prepare-safe-work-method-statement" },
+      { label: "Strata Schemes Management Act 2015", href: "https://legislation.nsw.gov.au/view/html/inforce/current/act-2015-050" },
     ],
   },
   {

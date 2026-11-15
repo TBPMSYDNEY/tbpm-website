@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ServicePage } from "@/data/site";
-import { services } from "@/data/site";
+import { services, afterHours } from "@/data/site";
 import { guides, guideHref } from "@/data/guides";
 import PageHero from "@/components/PageHero";
 import Cta from "@/components/Cta";
@@ -124,6 +124,12 @@ export default function ServicePageTemplate({ service }: { service: ServicePage 
               </li>
             ))}
           </ul>
+          {service.included.includes(afterHours.label) && (
+            <p className="mt-10 max-w-3xl rounded-2xl bg-surface-mid p-5 text-sm leading-relaxed text-ink-mute">
+              <strong className="text-ink">What the {afterHours.label.toLowerCase()} covers.</strong>{" "}
+              {afterHours.summary} {afterHours.detail} {afterHours.safety}
+            </p>
+          )}
         </div>
       </section>
 

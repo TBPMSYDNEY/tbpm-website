@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { site } from "@/data/site";
 
 const inputCls =
@@ -34,6 +35,32 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Optional follow-up asked after the enquiry is sent, so it never stands
+  // between a visitor and submitting the form.
+  const [enquirer, setEnquirer] = useState("");
+  const [sourceState, setSourceState] = useState<"idle" | "sending" | "sent">("idle");
+
+  async function handleSource(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const source = `${new FormData(e.currentTarget).get("source") || ""}`.trim();
+    if (!source) return;
+    setSourceState("sending");
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Referral source — ${enquirer}`,
+          from_name: enquirer,
+          message: `How ${enquirer} heard about us: ${source}`,
+        }),
+      });
+    } catch {
+      /* optional detail — never show an error for it */
+    }
+    setSourceState("sent");
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -43,13 +70,12 @@ export default function ContactForm() {
     const data = new FormData(e.currentTarget);
     const message = [
       `Name: ${data.get("name")}`,
-      `Role: ${data.get("role")}`,
+      `Role: ${data.get("role") || "Not provided"}`,
       `Email: ${data.get("email")}`,
       `Phone: ${data.get("phone")}`,
       `Building: ${data.get("building")}`,
       `Number of lots: ${data.get("lots")}`,
       `Enquiry type: ${data.get("enquiry")}`,
-      `How they heard about us: ${data.get("source")}`,
       "",
       `${data.get("message")}`,
     ].join("\n");
@@ -71,6 +97,7 @@ export default function ContactForm() {
       });
       const result = await res.json();
       if (result.success) {
+        setEnquirer(`${data.get("building") || data.get("name")}`);
         setSubmitted(true);
       } else {
         setError(result.message || "Something went wrong. Please try again.");
@@ -87,13 +114,35 @@ export default function ContactForm() {
       <div className="rounded-3xl border border-brand/30 bg-brand-light p-10 text-center">
         <h3 className="text-xl font-extrabold">Thanks — your message has been sent.</h3>
         <p className="mt-3 text-sm leading-relaxed text-ink-mute">
-          We&rsquo;ve received your enquiry and will respond within one business day. You can also
-          reach us at{" "}
+          We&rsquo;ve received your enquiry and will reply within one business day to arrange a
+          time to assess your building. Your proposal follows the assessment. You can also reach
+          us at{" "}
           <a href={`mailto:${site.email}`} className="font-semibold text-brand-text">
             {site.email}
           </a>{" "}
           or call {site.phone}.
         </p>
+        {sourceState === "sent" ? (
+          <p className="mt-6 text-sm font-semibold text-ink" role="status">
+            Thanks — noted.
+          </p>
+        ) : (
+          <form onSubmit={handleSource} className="mx-auto mt-8 max-w-md text-left">
+            <label htmlFor="source" className="mb-1.5 block text-sm font-semibold">
+              One optional question: how did you hear about us?
+            </label>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <input id="source" name="source" className={inputCls} placeholder="Google, referral, …" />
+              <button
+                type="submit"
+                disabled={sourceState === "sending"}
+                className="btn-secondary flex-none disabled:opacity-60"
+              >
+                {sourceState === "sending" ? "Sending…" : "Send"}
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     );
   }
@@ -116,12 +165,10 @@ export default function ContactForm() {
       </div>
       <div>
         <label htmlFor="role" className="mb-1.5 block text-sm font-semibold">
-          Role *
+          Your role <span className="font-normal text-ink-mute">(optional)</span>
         </label>
-        <select id="role" name="role" required className={inputCls} defaultValue="">
-          <option value="" disabled>
-            Select your role
-          </option>
+        <select id="role" name="role" className={inputCls} defaultValue="">
+          <option value="">Select your role</option>
           {roles.map((r) => (
             <option key={r}>{r}</option>
           ))}
@@ -196,12 +243,6 @@ export default function ContactForm() {
           placeholder="Tell us about your building and what you need."
         />
       </div>
-      <div className="sm:col-span-2">
-        <label htmlFor="source" className="mb-1.5 block text-sm font-semibold">
-          How did you hear about us?
-        </label>
-        <input id="source" name="source" className={inputCls} placeholder="Google, referral, …" />
-      </div>
       {error && (
         <div className="sm:col-span-2">
           <p className="rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">
@@ -214,8 +255,30 @@ export default function ContactForm() {
         </div>
       )}
       <div className="sm:col-span-2">
-        <button type="submit" disabled={submitting} className="btn-primary w-full disabled:opacity-60 sm:w-auto">
-          {submitting ? "Sending…" : "Request a Proposal"}
+        <p id="collection-notice" className="rounded-xl bg-surface-mid px-4 py-3 text-xs leading-relaxed text-ink-mute">
+          <strong className="text-ink">How we use this information:</strong> {site.legalName}{" "}
+          collects the details above to respond to your enquiry and prepare an assessment or
+          proposal. The form is sent to us through Web3Forms, a third-party form-processing
+          service, and the site uses Google Analytics; both may process information outside
+          Australia. To ask about, correct or delete your information, email{" "}
+          <a href={`mailto:${site.email}`} className="font-semibold text-brand-text underline">
+            {site.email}
+          </a>
+          . Full details are in our{" "}
+          <Link href="/privacy" className="font-semibold text-brand-text underline">
+            Privacy Policy
+          </Link>
+          .
+        </p>
+      </div>
+      <div className="sm:col-span-2">
+        <button
+          type="submit"
+          disabled={submitting}
+          aria-describedby="collection-notice"
+          className="btn-primary w-full disabled:opacity-60 sm:w-auto"
+        >
+          {submitting ? "Sending…" : "Send Enquiry"}
         </button>
       </div>
     </form>

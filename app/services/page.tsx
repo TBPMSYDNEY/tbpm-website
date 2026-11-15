@@ -4,14 +4,19 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Cta from "@/components/Cta";
 import { services } from "@/data/site";
+import { pageOpenGraph } from "@/data/seo";
+
+const title = "Our Services — Comprehensive Building Management Solutions";
+const description =
+  "TBPM delivers a full suite of building management services: on-site and hybrid building management, cleaning, gardening, concierge and project management across Sydney.";
 
 export const metadata: Metadata = {
-  title: "Our Services — Comprehensive Building Management Solutions",
-  description:
-    "TBPM delivers a full suite of building management services: on-site and hybrid building management, cleaning, gardening, concierge and project management across Sydney.",
+  title,
+  description,
   alternates: {
     canonical: "/services",
   },
+  openGraph: pageOpenGraph({ path: "/services", title, description }),
 };
 
 const blurbs: Record<string, string> = {
