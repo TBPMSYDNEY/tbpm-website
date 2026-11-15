@@ -71,7 +71,7 @@ export default function AboutPage() {
             {/* Ajit */}
             <div className="overflow-hidden rounded-3xl border border-ink/5 bg-white">
               <div className="grid sm:grid-cols-[14rem_1fr]">
-                <div className="relative aspect-[3/4] sm:aspect-auto">
+                <div className="relative aspect-[3/4] sm:self-start">
                   <Image
                     src="/images/Ajit-.png"
                     alt="Ajit Shrestha — Director, Building Operations"
@@ -102,7 +102,7 @@ export default function AboutPage() {
             {/* Steven */}
             <div className="overflow-hidden rounded-3xl border border-ink/5 bg-white">
               <div className="grid sm:grid-cols-[14rem_1fr]">
-                <div className="relative aspect-[3/4] sm:aspect-auto">
+                <div className="relative aspect-[3/4] sm:self-start">
                   <Image
                     src="/images/Untitled-design-1.png"
                     alt="Steven Glinatsis — Director, Construction & Project Management"

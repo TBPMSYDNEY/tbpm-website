@@ -168,6 +168,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Value props */}
+      <section className="py-16 sm:py-24">
+        <div className="container-site">
+          <Reveal className="max-w-2xl">
+            <span className="section-label">Included with new engagements</span>
+            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Make your management fee pay for itself.
+            </h2>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {valueProps.map((v, i) => (
+              <Reveal key={v.title} className="card-premium p-8" delay={(i % 4) * 90}>
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light">
+                  <svg
+                    className="h-6 w-6 text-brand"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+                <h3 className="mt-5 text-lg font-bold">{v.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-mute">{v.description}</p>
+              </Reveal>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:justify-between">
+            <p className="max-w-3xl text-xs leading-relaxed text-ink-mute">
+              Offers apply to new management or cleaning agreements only. Handyman and deep
+              cleaning hours are redeemable within the first 90 days of engagement; materials and
+              specialist consumables are excluded. Website hosting and maintenance are included
+              for the term of the agreement.
+            </p>
+            <Link href="/contact" className="btn-primary flex-none">
+              Ask About These Inclusions
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* About + 3D motion showcase — combined premium centrepiece */}
       <section className="relative overflow-hidden bg-ink grain">
         <div className="absolute inset-0">
@@ -353,51 +398,6 @@ export default function HomePage() {
             {testimonial.author} · {testimonial.location}
           </p>
         </Reveal>
-      </section>
-
-      {/* Value props */}
-      <section className="py-16 sm:py-24">
-        <div className="container-site">
-          <Reveal className="max-w-2xl">
-            <span className="section-label">Included with new engagements</span>
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Make your management fee pay for itself.
-            </h2>
-          </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {valueProps.map((v, i) => (
-              <Reveal key={v.title} className="card-premium p-8" delay={(i % 4) * 90}>
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light">
-                  <svg
-                    className="h-6 w-6 text-brand"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
-                  >
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                </span>
-                <h3 className="mt-5 text-lg font-bold">{v.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-mute">{v.description}</p>
-              </Reveal>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:justify-between">
-            <p className="max-w-3xl text-xs leading-relaxed text-ink-mute">
-              Offers apply to new management or cleaning agreements only. Handyman and deep
-              cleaning hours are redeemable within the first 90 days of engagement; materials and
-              specialist consumables are excluded. Website hosting and maintenance are included
-              for the term of the agreement.
-            </p>
-            <Link href="/contact" className="btn-primary flex-none">
-              Ask About These Inclusions
-            </Link>
-          </div>
-        </div>
       </section>
 
       <Cta />
