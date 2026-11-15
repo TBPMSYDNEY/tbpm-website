@@ -80,7 +80,7 @@ export default function AboutPage() {
                     sizes="14rem"
                   />
                 </div>
-                <div className="p-8">
+                <div className="min-w-0 p-8">
                   <h3 className="text-xl font-extrabold">Ajit Shrestha</h3>
                   <p className="mt-1 text-sm font-bold uppercase tracking-wider text-brand-text">
                     Director, Building Operations
@@ -105,14 +105,14 @@ export default function AboutPage() {
                 <div className="relative aspect-[3/4] sm:aspect-auto">
                   <Image
                     src="/images/Untitled-design-1.png"
-                    alt="Steven — Director, Construction & Project Management"
+                    alt="Steven Glinatsis — Director, Construction & Project Management"
                     fill
                     className="object-cover object-top"
                     sizes="14rem"
                   />
                 </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-extrabold">Steven</h3>
+                <div className="min-w-0 p-8">
+                  <h3 className="text-xl font-extrabold">Steven George Glinatsis</h3>
                   <p className="mt-1 text-sm font-bold uppercase tracking-wider text-brand-text">
                     Director, Construction &amp; Project Management
                   </p>
@@ -123,10 +123,54 @@ export default function AboutPage() {
                     and capital works planning.
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-ink-mute">
-                    NSW Licensed Builder and NSW BP registration. Steven leads construction and
-                    project management — scope reviews, contractor vetting and remedial project
-                    supervision.
+                    Steven leads construction and project management — scope reviews, contractor
+                    vetting and remedial project supervision.
                   </p>
+                  <dl className="mt-4 space-y-3 break-words rounded-2xl bg-surface-mid p-4 text-sm leading-relaxed text-ink-mute">
+                    <div>
+                      <dt className="font-bold text-ink">Held by Steven personally</dt>
+                      <dd>
+                        NSW Qualified Supervisor Certificate (Builder) No.{" "}
+                        <a
+                          href="https://verify.licence.nsw.gov.au/details/Qualified%20Supervisor%20Certificate/1-22K6BKF"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold text-brand-text underline"
+                        >
+                          49896S
+                        </a>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="font-bold text-ink">
+                        Held by ALL Building and Property Services Pty Ltd
+                      </dt>
+                      <dd>
+                        NSW Contractor Licence No. 364306C and Building Practitioner Registration
+                        No. BUP4254025. Steven&rsquo;s certificate is linked to this contractor
+                        licence on the NSW register. The company is a{" "}
+                        <a href="#related-parties" className="font-semibold text-brand-text underline">
+                          related party of TBPM
+                        </a>
+                        .
+                      </dd>
+                    </div>
+                    <div>
+                      <dd>
+                        Checked against the public register on 16 November 2026. Confirm current
+                        status on{" "}
+                        <a
+                          href="https://verify.licence.nsw.gov.au/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold text-brand-text underline"
+                        >
+                          Verify NSW
+                        </a>
+                        .
+                      </dd>
+                    </div>
+                  </dl>
                 </div>
               </div>
             </div>
@@ -150,7 +194,9 @@ export default function AboutPage() {
             >
               ALL Building and Property Services
             </a>{" "}
-            is a related party of TBPM. Because we also help Owners Corporations source and compare
+            is a related party of TBPM: it holds the NSW contractor licence and building
+            practitioner registration that TBPM director Steven Glinatsis&rsquo;s supervisor
+            certificate is linked to. Because we also help Owners Corporations source and compare
             contractor quotes, we want committees to know exactly how that relationship is handled.
           </p>
           <ul className="mt-6 space-y-4 text-ink-mute">
